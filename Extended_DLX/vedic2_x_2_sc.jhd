@@ -1,0 +1,5 @@
+MODULE vedic2_x_2_sc
+	SUBMODULE halfadder_sc
+		INSTANCE XLXI_5
+	SUBMODULE halfadder_sc
+		INSTANCE XLXI_6

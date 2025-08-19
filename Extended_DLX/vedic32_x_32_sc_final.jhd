@@ -1,0 +1,3 @@
+MODULE vedic32_x_32_sc_final
+	SUBMODULE vedic32_x_32_signed_sc
+		INSTANCE XLXI_1

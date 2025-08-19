@@ -1,0 +1,9 @@
+MODULE vedic32_x_32_signed_sc
+	SUBMODULE twoscomplement_32bit
+		INSTANCE XLXI_1
+	SUBMODULE twoscomplement_32bit
+		INSTANCE XLXI_2
+	SUBMODULE twoscomplement_32bit
+		INSTANCE XLXI_4
+	SUBMODULE vedic32_x_32_sc
+		INSTANCE XLXI_8

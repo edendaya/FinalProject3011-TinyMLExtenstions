@@ -1,0 +1,1864 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf
+-ucf SOURCE.ucf
+
+Design file:              Top_Level.ncd
+Physical constraint file: Top_Level.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_fpgaClk_i = PERIOD TIMEGRP "fpgaClk_i" 12 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is  32.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_fpgaClk_i = PERIOD TIMEGRP "fpgaClk_i" 12 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 13.667ns (period - min period limit)
+  Period: 16.667ns
+  Min period limit: 3.000ns (333.333MHz) (Tdcmper_CLKFX)
+  Physical resource: XLXI_23/u0/u0/CLKFX
+  Logical resource: XLXI_23/u0/u0/CLKFX
+  Location pin: DCM_X0Y2.CLKFX
+  Clock network: XLXI_23/u0/genClkP_s
+--------------------------------------------------------------------------------
+Slack: 13.667ns (period - min period limit)
+  Period: 16.667ns
+  Min period limit: 3.000ns (333.333MHz) (Tdcmper_CLKFX)
+  Physical resource: XLXI_23/u0/u0/CLKFX180
+  Logical resource: XLXI_23/u0/u0/CLKFX180
+  Location pin: DCM_X0Y2.CLKFX180
+  Clock network: XLXI_23/u0/genClkN_s
+--------------------------------------------------------------------------------
+Slack: 51.333ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 83.333ns
+  Low pulse: 41.666ns
+  Low pulse limit: 16.000ns (Tdcmpw_CLKIN_10_25)
+  Physical resource: XLXI_23/u0/u0/CLKIN
+  Logical resource: XLXI_23/u0/u0/CLKIN
+  Location pin: DCM_X0Y2.CLKIN
+  Clock network: XLXI_23/u0/u0_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sdClkFb_i = PERIOD TIMEGRP "sdClkFb_i" 25 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5641058433766 paths analyzed, 2919 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  39.494ns.
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_35/XLXI_2/XLXI_6/REG_30 (SLICE_X26Y18.CX), 221653496925 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.506ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_6/REG_30 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.459ns (Levels of Logic = 43)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_6/REG_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X26Y6.A5       net (fanout=2)        0.694   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X26Y6.A        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_1
+    SLICE_X26Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<9>
+    SLICE_X26Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_5
+    SLICE_X23Y5.C6       net (fanout=2)        0.633   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/a_xor_b
+    SLICE_X23Y5.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_1
+    SLICE_X23Y5.D5       net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<1>
+    SLICE_X23Y5.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_5
+    SLICE_X22Y7.B5       net (fanout=2)        0.639   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+    SLICE_X22Y7.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X22Y7.D1       net (fanout=2)        0.606   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry1
+    SLICE_X22Y7.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X23Y6.C6       net (fanout=2)        0.333   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+    SLICE_X23Y6.C        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y6.D6       net (fanout=2)        0.423   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry4
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X25Y17.B6      net (fanout=2)        0.886   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X25Y17.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<18>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X25Y17.A5      net (fanout=2)        0.239   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry1
+    SLICE_X25Y17.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<18>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X24Y16.C6      net (fanout=2)        0.540   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry2
+    SLICE_X24Y16.C       Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q5<15>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y15.B6      net (fanout=2)        0.505   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/carry4
+    SLICE_X23Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_3/XLXN_19
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_1/XLXI_2
+    SLICE_X22Y14.B5      net (fanout=2)        0.401   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_1/XLXN_19
+    SLICE_X22Y14.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<27>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<27>
+    SLICE_X20Y14.C3      net (fanout=2)        0.621   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<25>
+    SLICE_X20Y14.C       Tilo                  0.235   XLXI_35/XLXI_2/XLXI_6/REG<22>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<25>1
+    SLICE_X18Y14.B3      net (fanout=2)        0.632   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<25>
+    SLICE_X18Y14.B       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<19>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_5
+    SLICE_X17Y15.C6      net (fanout=2)        0.893   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/a_xor_b
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.B5      net (fanout=2)        0.509   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_3/XLXI_1
+    SLICE_X25Y18.A5      net (fanout=2)        0.236   XLXI_35/XLXI_2/XLXI_144/mac_out<30>
+    SLICE_X25Y18.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_146/Mmux_O476
+    SLICE_X26Y18.CX      net (fanout=2)        0.510   XLXI_35/XLXI_2/DINT<30>
+    SLICE_X26Y18.CLK     Tdick                 0.085   XLXI_35/XLXI_2/XLXI_6/REG<30>
+                                                       XLXI_35/XLXI_2/XLXI_6/REG_30
+    -------------------------------------------------  ---------------------------
+    Total                                     39.459ns (11.949ns logic, 27.510ns route)
+                                                       (30.3% logic, 69.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.506ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_6/REG_30 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.459ns (Levels of Logic = 43)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_6/REG_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X26Y6.A5       net (fanout=2)        0.694   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X26Y6.A        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_1
+    SLICE_X26Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<9>
+    SLICE_X26Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_5
+    SLICE_X23Y5.C6       net (fanout=2)        0.633   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/a_xor_b
+    SLICE_X23Y5.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_1
+    SLICE_X23Y5.D5       net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<1>
+    SLICE_X23Y5.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_5
+    SLICE_X22Y7.B5       net (fanout=2)        0.639   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+    SLICE_X22Y7.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X22Y7.D1       net (fanout=2)        0.606   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry1
+    SLICE_X22Y7.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X23Y6.C6       net (fanout=2)        0.333   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+    SLICE_X23Y6.C        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y6.D6       net (fanout=2)        0.423   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry4
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X22Y13.B5      net (fanout=2)        0.704   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X22Y13.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+    SLICE_X19Y13.C5      net (fanout=2)        0.642   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<21>
+    SLICE_X19Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>1
+    SLICE_X19Y13.B6      net (fanout=2)        0.353   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+    SLICE_X19Y13.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_5
+    SLICE_X17Y13.C6      net (fanout=2)        1.171   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/a_xor_b
+    SLICE_X17Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_4
+    SLICE_X17Y13.D4      net (fanout=2)        0.501   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry1
+    SLICE_X17Y13.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_3/XLXI_4
+    SLICE_X17Y15.B6      net (fanout=2)        0.518   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+    SLICE_X17Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_4/XLXI_4
+    SLICE_X17Y15.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry1
+    SLICE_X17Y15.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_1/XLXI_4
+    SLICE_X17Y15.C2      net (fanout=2)        0.537   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry0
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.B5      net (fanout=2)        0.509   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_3/XLXI_1
+    SLICE_X25Y18.A5      net (fanout=2)        0.236   XLXI_35/XLXI_2/XLXI_144/mac_out<30>
+    SLICE_X25Y18.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_146/Mmux_O476
+    SLICE_X26Y18.CX      net (fanout=2)        0.510   XLXI_35/XLXI_2/DINT<30>
+    SLICE_X26Y18.CLK     Tdick                 0.085   XLXI_35/XLXI_2/XLXI_6/REG<30>
+                                                       XLXI_35/XLXI_2/XLXI_6/REG_30
+    -------------------------------------------------  ---------------------------
+    Total                                     39.459ns (12.002ns logic, 27.457ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.519ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_6/REG_30 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.446ns (Levels of Logic = 43)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_6/REG_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X24Y5.A2       net (fanout=2)        0.504   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X24Y5.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y4.C6       net (fanout=2)        0.451   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/Carry1
+    SLICE_X24Y4.C        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_3/XLXI_1
+    SLICE_X22Y6.B5       net (fanout=2)        0.669   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<10>
+    SLICE_X22Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/XLXI_5
+    SLICE_X24Y4.D6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/a_xor_b
+    SLICE_X24Y4.D        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/XLXI_4
+    SLICE_X26Y5.D6       net (fanout=2)        0.386   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+    SLICE_X26Y5.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_4/XLXI_4
+    SLICE_X25Y6.A6       net (fanout=2)        0.601   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/carry0
+    SLICE_X25Y6.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_2/XLXI_1/XLXI_1
+    SLICE_X25Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<4>
+    SLICE_X25Y6.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_5
+    SLICE_X23Y6.D5       net (fanout=2)        0.447   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/a_xor_b
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X22Y13.B5      net (fanout=2)        0.704   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X22Y13.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+    SLICE_X19Y13.C5      net (fanout=2)        0.642   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<21>
+    SLICE_X19Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>1
+    SLICE_X19Y13.B6      net (fanout=2)        0.353   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+    SLICE_X19Y13.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_5
+    SLICE_X17Y13.C6      net (fanout=2)        1.171   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/a_xor_b
+    SLICE_X17Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_4
+    SLICE_X17Y13.D4      net (fanout=2)        0.501   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry1
+    SLICE_X17Y13.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_3/XLXI_4
+    SLICE_X17Y15.B6      net (fanout=2)        0.518   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+    SLICE_X17Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_4/XLXI_4
+    SLICE_X17Y15.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry1
+    SLICE_X17Y15.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_1/XLXI_4
+    SLICE_X17Y15.C2      net (fanout=2)        0.537   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry0
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.B5      net (fanout=2)        0.509   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_3/XLXI_1
+    SLICE_X25Y18.A5      net (fanout=2)        0.236   XLXI_35/XLXI_2/XLXI_144/mac_out<30>
+    SLICE_X25Y18.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_146/Mmux_O476
+    SLICE_X26Y18.CX      net (fanout=2)        0.510   XLXI_35/XLXI_2/DINT<30>
+    SLICE_X26Y18.CLK     Tdick                 0.085   XLXI_35/XLXI_2/XLXI_6/REG<30>
+                                                       XLXI_35/XLXI_2/XLXI_6/REG_30
+    -------------------------------------------------  ---------------------------
+    Total                                     39.446ns (11.940ns logic, 27.506ns route)
+                                                       (30.3% logic, 69.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_35/XLXI_2/XLXI_6/REG_31 (SLICE_X27Y18.DX), 260359875733 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.546ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_6/REG_31 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.419ns (Levels of Logic = 43)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_6/REG_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X26Y6.A5       net (fanout=2)        0.694   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X26Y6.A        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_1
+    SLICE_X26Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<9>
+    SLICE_X26Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_5
+    SLICE_X23Y5.C6       net (fanout=2)        0.633   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/a_xor_b
+    SLICE_X23Y5.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_1
+    SLICE_X23Y5.D5       net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<1>
+    SLICE_X23Y5.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_5
+    SLICE_X22Y7.B5       net (fanout=2)        0.639   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+    SLICE_X22Y7.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X22Y7.D1       net (fanout=2)        0.606   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry1
+    SLICE_X22Y7.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X23Y6.C6       net (fanout=2)        0.333   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+    SLICE_X23Y6.C        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y6.D6       net (fanout=2)        0.423   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry4
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X25Y17.B6      net (fanout=2)        0.886   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X25Y17.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<18>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X25Y17.A5      net (fanout=2)        0.239   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry1
+    SLICE_X25Y17.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<18>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X24Y16.C6      net (fanout=2)        0.540   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry2
+    SLICE_X24Y16.C       Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q5<15>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y15.B6      net (fanout=2)        0.505   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/carry4
+    SLICE_X23Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_3/XLXN_19
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_1/XLXI_2
+    SLICE_X22Y14.B5      net (fanout=2)        0.401   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_1/XLXN_19
+    SLICE_X22Y14.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<27>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<27>
+    SLICE_X20Y14.C3      net (fanout=2)        0.621   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<25>
+    SLICE_X20Y14.C       Tilo                  0.235   XLXI_35/XLXI_2/XLXI_6/REG<22>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<25>1
+    SLICE_X18Y14.B3      net (fanout=2)        0.632   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<25>
+    SLICE_X18Y14.B       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<19>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_5
+    SLICE_X17Y15.C6      net (fanout=2)        0.893   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/a_xor_b
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.D4      net (fanout=2)        0.564   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_4/XLXI_1
+    SLICE_X25Y18.C6      net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/mac_out<31>
+    SLICE_X25Y18.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_146/Mmux_O484
+    SLICE_X27Y18.DX      net (fanout=2)        0.472   XLXI_35/XLXI_2/DINT<31>
+    SLICE_X27Y18.CLK     Tdick                 0.114   XLXI_35/XLXI_2/XLXI_6/REG<31>
+                                                       XLXI_35/XLXI_2/XLXI_6/REG_31
+    -------------------------------------------------  ---------------------------
+    Total                                     39.419ns (11.978ns logic, 27.441ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.546ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_6/REG_31 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.419ns (Levels of Logic = 43)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_6/REG_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X26Y6.A5       net (fanout=2)        0.694   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X26Y6.A        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_1
+    SLICE_X26Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<9>
+    SLICE_X26Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_5
+    SLICE_X23Y5.C6       net (fanout=2)        0.633   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/a_xor_b
+    SLICE_X23Y5.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_1
+    SLICE_X23Y5.D5       net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<1>
+    SLICE_X23Y5.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_5
+    SLICE_X22Y7.B5       net (fanout=2)        0.639   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+    SLICE_X22Y7.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X22Y7.D1       net (fanout=2)        0.606   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry1
+    SLICE_X22Y7.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X23Y6.C6       net (fanout=2)        0.333   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+    SLICE_X23Y6.C        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y6.D6       net (fanout=2)        0.423   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry4
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X22Y13.B5      net (fanout=2)        0.704   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X22Y13.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+    SLICE_X19Y13.C5      net (fanout=2)        0.642   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<21>
+    SLICE_X19Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>1
+    SLICE_X19Y13.B6      net (fanout=2)        0.353   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+    SLICE_X19Y13.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_5
+    SLICE_X17Y13.C6      net (fanout=2)        1.171   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/a_xor_b
+    SLICE_X17Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_4
+    SLICE_X17Y13.D4      net (fanout=2)        0.501   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry1
+    SLICE_X17Y13.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_3/XLXI_4
+    SLICE_X17Y15.B6      net (fanout=2)        0.518   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+    SLICE_X17Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_4/XLXI_4
+    SLICE_X17Y15.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry1
+    SLICE_X17Y15.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_1/XLXI_4
+    SLICE_X17Y15.C2      net (fanout=2)        0.537   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry0
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.D4      net (fanout=2)        0.564   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_4/XLXI_1
+    SLICE_X25Y18.C6      net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/mac_out<31>
+    SLICE_X25Y18.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_146/Mmux_O484
+    SLICE_X27Y18.DX      net (fanout=2)        0.472   XLXI_35/XLXI_2/DINT<31>
+    SLICE_X27Y18.CLK     Tdick                 0.114   XLXI_35/XLXI_2/XLXI_6/REG<31>
+                                                       XLXI_35/XLXI_2/XLXI_6/REG_31
+    -------------------------------------------------  ---------------------------
+    Total                                     39.419ns (12.031ns logic, 27.388ns route)
+                                                       (30.5% logic, 69.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.559ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_6/REG_31 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.406ns (Levels of Logic = 43)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_6/REG_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X24Y5.A2       net (fanout=2)        0.504   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X24Y5.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y4.C6       net (fanout=2)        0.451   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/Carry1
+    SLICE_X24Y4.C        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_3/XLXI_1
+    SLICE_X22Y6.B5       net (fanout=2)        0.669   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<10>
+    SLICE_X22Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/XLXI_5
+    SLICE_X24Y4.D6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/a_xor_b
+    SLICE_X24Y4.D        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/XLXI_4
+    SLICE_X26Y5.D6       net (fanout=2)        0.386   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+    SLICE_X26Y5.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_4/XLXI_4
+    SLICE_X25Y6.A6       net (fanout=2)        0.601   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/carry0
+    SLICE_X25Y6.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_2/XLXI_1/XLXI_1
+    SLICE_X25Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<4>
+    SLICE_X25Y6.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_5
+    SLICE_X23Y6.D5       net (fanout=2)        0.447   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/a_xor_b
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X22Y13.B5      net (fanout=2)        0.704   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X22Y13.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+    SLICE_X19Y13.C5      net (fanout=2)        0.642   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<21>
+    SLICE_X19Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>1
+    SLICE_X19Y13.B6      net (fanout=2)        0.353   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+    SLICE_X19Y13.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_5
+    SLICE_X17Y13.C6      net (fanout=2)        1.171   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/a_xor_b
+    SLICE_X17Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_4
+    SLICE_X17Y13.D4      net (fanout=2)        0.501   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry1
+    SLICE_X17Y13.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_3/XLXI_4
+    SLICE_X17Y15.B6      net (fanout=2)        0.518   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+    SLICE_X17Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_4/XLXI_4
+    SLICE_X17Y15.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry1
+    SLICE_X17Y15.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_1/XLXI_4
+    SLICE_X17Y15.C2      net (fanout=2)        0.537   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry0
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.D4      net (fanout=2)        0.564   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_4/XLXI_1
+    SLICE_X25Y18.C6      net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/mac_out<31>
+    SLICE_X25Y18.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_146/Mmux_O484
+    SLICE_X27Y18.DX      net (fanout=2)        0.472   XLXI_35/XLXI_2/DINT<31>
+    SLICE_X27Y18.CLK     Tdick                 0.114   XLXI_35/XLXI_2/XLXI_6/REG<31>
+                                                       XLXI_35/XLXI_2/XLXI_6/REG_31
+    -------------------------------------------------  ---------------------------
+    Total                                     39.406ns (11.969ns logic, 27.437ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_35/XLXI_2/XLXI_7/REG_31 (SLICE_X23Y18.C3), 241006508504 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.622ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_7/REG_31 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.365ns (Levels of Logic = 43)
+  Clock Path Skew:      0.022ns (0.460 - 0.438)
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_7/REG_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X26Y6.A5       net (fanout=2)        0.694   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X26Y6.A        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_1
+    SLICE_X26Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<9>
+    SLICE_X26Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_5
+    SLICE_X23Y5.C6       net (fanout=2)        0.633   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/a_xor_b
+    SLICE_X23Y5.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_1
+    SLICE_X23Y5.D5       net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<1>
+    SLICE_X23Y5.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_5
+    SLICE_X22Y7.B5       net (fanout=2)        0.639   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+    SLICE_X22Y7.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X22Y7.D1       net (fanout=2)        0.606   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry1
+    SLICE_X22Y7.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X23Y6.C6       net (fanout=2)        0.333   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+    SLICE_X23Y6.C        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y6.D6       net (fanout=2)        0.423   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry4
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X25Y17.B6      net (fanout=2)        0.886   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X25Y17.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<18>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X25Y17.A5      net (fanout=2)        0.239   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry1
+    SLICE_X25Y17.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<18>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X24Y16.C6      net (fanout=2)        0.540   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry2
+    SLICE_X24Y16.C       Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q5<15>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y15.B6      net (fanout=2)        0.505   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/carry4
+    SLICE_X23Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_3/XLXN_19
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_1/XLXI_2
+    SLICE_X22Y14.B5      net (fanout=2)        0.401   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_1/XLXN_19
+    SLICE_X22Y14.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<27>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/middle_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<27>
+    SLICE_X20Y14.C3      net (fanout=2)        0.621   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<25>
+    SLICE_X20Y14.C       Tilo                  0.235   XLXI_35/XLXI_2/XLXI_6/REG<22>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<25>1
+    SLICE_X18Y14.B3      net (fanout=2)        0.632   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<25>
+    SLICE_X18Y14.B       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<19>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_5
+    SLICE_X17Y15.C6      net (fanout=2)        0.893   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/a_xor_b
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.D4      net (fanout=2)        0.564   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_4/XLXI_1
+    SLICE_X23Y18.C3      net (fanout=2)        0.568   XLXI_35/XLXI_2/XLXI_144/mac_out<31>
+    SLICE_X23Y18.CLK     Tas                   0.373   XLXI_35/XLXI_2/XLXI_7/REG<31>
+                                                       XLXI_35/XLXI_2/XLXI_8/Mmux_O251
+                                                       XLXI_35/XLXI_2/XLXI_7/REG_31
+    -------------------------------------------------  ---------------------------
+    Total                                     39.365ns (11.978ns logic, 27.387ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.622ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_7/REG_31 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.365ns (Levels of Logic = 43)
+  Clock Path Skew:      0.022ns (0.460 - 0.438)
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_7/REG_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X26Y6.A5       net (fanout=2)        0.694   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X26Y6.A        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_1
+    SLICE_X26Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<9>
+    SLICE_X26Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/S1_O<8>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_5
+    SLICE_X23Y5.C6       net (fanout=2)        0.633   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/a_xor_b
+    SLICE_X23Y5.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_2/XLXI_1
+    SLICE_X23Y5.D5       net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<1>
+    SLICE_X23Y5.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_5
+    SLICE_X22Y7.B5       net (fanout=2)        0.639   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/a_xor_b
+    SLICE_X22Y7.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_2/XLXI_4
+    SLICE_X22Y7.D1       net (fanout=2)        0.606   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry1
+    SLICE_X22Y7.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/XLXI_4
+    SLICE_X23Y6.C6       net (fanout=2)        0.333   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/Carry2
+    SLICE_X23Y6.C        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X23Y6.D6       net (fanout=2)        0.423   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry4
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X22Y13.B5      net (fanout=2)        0.704   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X22Y13.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+    SLICE_X19Y13.C5      net (fanout=2)        0.642   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<21>
+    SLICE_X19Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>1
+    SLICE_X19Y13.B6      net (fanout=2)        0.353   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+    SLICE_X19Y13.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_5
+    SLICE_X17Y13.C6      net (fanout=2)        1.171   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/a_xor_b
+    SLICE_X17Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_4
+    SLICE_X17Y13.D4      net (fanout=2)        0.501   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry1
+    SLICE_X17Y13.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_3/XLXI_4
+    SLICE_X17Y15.B6      net (fanout=2)        0.518   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+    SLICE_X17Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_4/XLXI_4
+    SLICE_X17Y15.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry1
+    SLICE_X17Y15.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_1/XLXI_4
+    SLICE_X17Y15.C2      net (fanout=2)        0.537   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry0
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.D4      net (fanout=2)        0.564   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_4/XLXI_1
+    SLICE_X23Y18.C3      net (fanout=2)        0.568   XLXI_35/XLXI_2/XLXI_144/mac_out<31>
+    SLICE_X23Y18.CLK     Tas                   0.373   XLXI_35/XLXI_2/XLXI_7/REG<31>
+                                                       XLXI_35/XLXI_2/XLXI_8/Mmux_O251
+                                                       XLXI_35/XLXI_2/XLXI_7/REG_31
+    -------------------------------------------------  ---------------------------
+    Total                                     39.365ns (12.031ns logic, 27.334ns route)
+                                                       (30.6% logic, 69.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.635ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_35/XLXI_1/XLXI_5/next_state_4_1 (FF)
+  Destination:          XLXI_35/XLXI_2/XLXI_7/REG_31 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      39.352ns (Levels of Logic = 43)
+  Clock Path Skew:      0.022ns (0.460 - 0.438)
+  Source Clock:         sdClkFb_i_BUFGP rising at 0.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: XLXI_35/XLXI_1/XLXI_5/next_state_4_1 to XLXI_35/XLXI_2/XLXI_7/REG_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y4.AMUX     Tshcko                0.518   XLXI_35/XLXI_1/XLXI_5/next_state_4_3
+                                                       XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A6       net (fanout=4)        1.676   XLXI_35/XLXI_1/XLXI_5/next_state_4_1
+    SLICE_X32Y4.A        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_2_2
+                                                       XLXI_35/XLXI_1/XLXI_5/Cce_GND_125_o_OR_390_o1
+    SLICE_X28Y3.D6       net (fanout=44)       1.336   SIGNALS<5>
+    SLICE_X28Y3.DMUX     Topdd                 0.446   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/n0009<3>1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Madd_GND_156_o_GND_156_o_add_1_OUT_cy<3>
+    SLICE_X32Y2.C5       net (fanout=1)        0.962   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/GND_156_o_GND_156_o_add_1_OUT<3>
+    SLICE_X32Y2.C        Tilo                  0.235   XLXI_35/XLXI_1/XLXI_5/next_state_4_4
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_12/Mmux_n0004101
+    SLICE_X35Y4.C6       net (fanout=16)       0.648   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXN_17<3>
+    SLICE_X35Y4.C        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_4
+    SLICE_X35Y4.A6       net (fanout=2)        1.280   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXN_14
+    SLICE_X35Y4.A        Tilo                  0.259   XLXI_35/XLXI_1/XLXI_5/next_state_1_2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z2/XLXI_6/XLXI_2
+    SLICE_X26Y4.A4       net (fanout=2)        1.718   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q1<2>
+    SLICE_X26Y4.A        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_6/REG<5>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z5/XLXI_4/XLXI_1
+    SLICE_X27Y3.D4       net (fanout=2)        1.001   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q4<3>
+    SLICE_X27Y3.D        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_4/XLXI_4
+    SLICE_X31Y2.A6       net (fanout=2)        0.983   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/carry3
+    SLICE_X31Y2.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/z7/XLXI_6/XLXI_1
+    SLICE_X31Y2.B6       net (fanout=2)        0.148   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/n0010<7>
+    SLICE_X31Y2.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z1/q3<2>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_5
+    SLICE_X27Y4.C3       net (fanout=2)        1.076   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/a_xor_b
+    SLICE_X27Y4.C        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z1/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/lower_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y3.A4       net (fanout=2)        0.541   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/carry4
+    SLICE_X25Y3.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXI_2
+    SLICE_X25Y5.A6       net (fanout=2)        0.364   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_1/XLXN_19
+    SLICE_X25Y5.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z5/upper_4bit/XLXI_2/XLXI_1
+    SLICE_X25Y5.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/q4<5>
+    SLICE_X25Y5.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_1/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_5
+    SLICE_X24Y5.A2       net (fanout=2)        0.504   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/a_xor_b
+    SLICE_X24Y5.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_4/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y4.C6       net (fanout=2)        0.451   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/Carry1
+    SLICE_X24Y4.C        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z1/z7/middle_4bit/XLXI_3/XLXI_1
+    SLICE_X22Y6.B5       net (fanout=2)        0.669   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/n0010<10>
+    SLICE_X22Y6.B        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/lower_4bit/XLXI_3/a_xor_b
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/XLXI_5
+    SLICE_X24Y4.D6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/a_xor_b
+    SLICE_X24Y4.D        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_3/XLXI_4
+    SLICE_X26Y5.D6       net (fanout=2)        0.386   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry2
+    SLICE_X26Y5.D        Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/XLXI_4/XLXI_4
+    SLICE_X25Y6.A6       net (fanout=2)        0.601   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/carry0
+    SLICE_X25Y6.A        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_2/XLXI_1/XLXI_1
+    SLICE_X25Y6.B6       net (fanout=2)        0.150   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/q4<4>
+    SLICE_X25Y6.B        Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z5/XLXI_1/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_5
+    SLICE_X23Y6.D5       net (fanout=2)        0.447   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/a_xor_b
+    SLICE_X23Y6.D        Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<7>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_1/XLXI_4
+    SLICE_X24Y8.B6       net (fanout=2)        0.655   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry0
+    SLICE_X24Y8.B        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_2/XLXI_4
+    SLICE_X24Y8.A6       net (fanout=2)        0.561   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry1
+    SLICE_X24Y8.A        Tilo                  0.235   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z2/z3/z1/XLXN_14
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_3/XLXI_4
+    SLICE_X25Y11.A6      net (fanout=2)        0.550   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/Carry2
+    SLICE_X25Y11.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/middle_4bit/XLXI_4/XLXI_4
+    SLICE_X25Y11.B4      net (fanout=2)        0.565   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/carry8
+    SLICE_X25Y11.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_1/XLXI_4
+    SLICE_X26Y12.D6      net (fanout=2)        0.539   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry0
+    SLICE_X26Y12.D       Tilo                  0.254   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_2/XLXI_4
+    SLICE_X26Y12.C6      net (fanout=2)        0.151   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+    SLICE_X26Y12.C       Tilo                  0.255   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_3/XLXI_4
+    SLICE_X27Y14.C5      net (fanout=2)        0.421   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/Carry2
+    SLICE_X27Y14.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/lower_12bit/upper_4bit/XLXI_4/XLXI_4
+    SLICE_X27Y14.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/carry
+    SLICE_X27Y14.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_1/XLXI_4
+    SLICE_X22Y13.B5      net (fanout=2)        0.704   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/Carry0
+    SLICE_X22Y13.BMUX    Topbb                 0.464   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_11/z7/upper_12bit/lower_4bit/XLXI_2/XLXI_1
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/Madd_in_twos[31]_GND_140_o_add_1_OUT_cy<23>
+    SLICE_X19Y13.C5      net (fanout=2)        0.642   XLXI_35/XLXI_2/XLXI_144/XLXI_1/XLXI_3/in_twos[31]_GND_140_o_add_1_OUT<21>
+    SLICE_X19Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>1
+    SLICE_X19Y13.B6      net (fanout=2)        0.353   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+    SLICE_X19Y13.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/D[31]_en_and_1_OUT<21>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_5
+    SLICE_X17Y13.C6      net (fanout=2)        1.171   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/a_xor_b
+    SLICE_X17Y13.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_2/XLXI_4
+    SLICE_X17Y13.D4      net (fanout=2)        0.501   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry1
+    SLICE_X17Y13.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_3/XLXI_4
+    SLICE_X17Y15.B6      net (fanout=2)        0.518   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/Carry2
+    SLICE_X17Y15.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_2/XLXI_4/XLXI_4
+    SLICE_X17Y15.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry1
+    SLICE_X17Y15.A       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_1/XLXI_4
+    SLICE_X17Y15.C2      net (fanout=2)        0.537   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry0
+    SLICE_X17Y15.C       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_2/XLXI_4
+    SLICE_X17Y15.D5      net (fanout=2)        0.242   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry1
+    SLICE_X17Y15.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_3/XLXI_4
+    SLICE_X21Y16.B3      net (fanout=2)        1.029   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/Carry2
+    SLICE_X21Y16.B       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_3/XLXI_4/XLXI_4
+    SLICE_X21Y16.A5      net (fanout=2)        0.238   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/carry2
+    SLICE_X21Y16.A       Tilo                  0.259   XLXI_35/XLXI_2/REG_C/REG<25>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_1/XLXI_4
+    SLICE_X21Y18.B1      net (fanout=2)        0.742   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry0
+    SLICE_X21Y18.B       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_6/REG<29>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_2/XLXI_4
+    SLICE_X25Y18.D4      net (fanout=2)        0.564   XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/Carry1
+    SLICE_X25Y18.D       Tilo                  0.259   XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc<31>
+                                                       XLXI_35/XLXI_2/XLXI_144/XLXI_5/adder_inst/ADD1/XLXI_4/XLXI_4/XLXI_1
+    SLICE_X23Y18.C3      net (fanout=2)        0.568   XLXI_35/XLXI_2/XLXI_144/mac_out<31>
+    SLICE_X23Y18.CLK     Tas                   0.373   XLXI_35/XLXI_2/XLXI_7/REG<31>
+                                                       XLXI_35/XLXI_2/XLXI_8/Mmux_O251
+                                                       XLXI_35/XLXI_2/XLXI_7/REG_31
+    -------------------------------------------------  ---------------------------
+    Total                                     39.352ns (11.969ns logic, 27.383ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sdClkFb_i = PERIOD TIMEGRP "sdClkFb_i" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_23/u2/data_out_s_9 (SLICE_X34Y29.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.373ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u2/curr_state_FSM_FFd1 (FF)
+  Destination:          XLXI_23/u2/data_out_s_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.384ns (Levels of Logic = 0)
+  Clock Path Skew:      0.011ns (0.094 - 0.083)
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u2/curr_state_FSM_FFd1 to XLXI_23/u2/data_out_s_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y30.AQ      Tcko                  0.198   XLXI_23/u2/curr_state_FSM_FFd2
+                                                       XLXI_23/u2/curr_state_FSM_FFd1
+    SLICE_X34Y29.CE      net (fanout=31)       0.290   XLXI_23/u2/curr_state_FSM_FFd1
+    SLICE_X34Y29.CLK     Tckce       (-Th)     0.104   XLXI_23/u2/data_out_s<9>
+                                                       XLXI_23/u2/data_out_s_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.384ns (0.094ns logic, 0.290ns route)
+                                                       (24.5% logic, 75.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_23/u5/rasTimer_r_1 (SLICE_X22Y41.CE), 19 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.382ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u5/rasTimer_r_0 (FF)
+  Destination:          XLXI_23/u5/rasTimer_r_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.382ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u5/rasTimer_r_0 to XLXI_23/u5/rasTimer_r_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y41.BMUX    Tshcko                0.266   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_0
+    SLICE_X22Y41.C6      net (fanout=4)        0.041   XLXI_23/u5/rasTimer_r<0>
+    SLICE_X22Y41.C       Tilo                  0.156   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/_n0427_inv1
+    SLICE_X22Y41.CE      net (fanout=1)        0.011   XLXI_23/u5/_n0427_inv
+    SLICE_X22Y41.CLK     Tckce       (-Th)     0.092   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.382ns (0.330ns logic, 0.052ns route)
+                                                       (86.4% logic, 13.6% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.492ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u5/rasTimer_r_1 (FF)
+  Destination:          XLXI_23/u5/rasTimer_r_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.492ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u5/rasTimer_r_1 to XLXI_23/u5/rasTimer_r_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y41.AQ      Tcko                  0.234   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_1
+    SLICE_X22Y41.C3      net (fanout=3)        0.183   XLXI_23/u5/rasTimer_r<1>
+    SLICE_X22Y41.C       Tilo                  0.156   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/_n0427_inv1
+    SLICE_X22Y41.CE      net (fanout=1)        0.011   XLXI_23/u5/_n0427_inv
+    SLICE_X22Y41.CLK     Tckce       (-Th)     0.092   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.492ns (0.298ns logic, 0.194ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.702ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u5/state_r_FSM_FFd1 (FF)
+  Destination:          XLXI_23/u5/rasTimer_r_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.709ns (Levels of Logic = 1)
+  Clock Path Skew:      0.007ns (0.120 - 0.113)
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u5/state_r_FSM_FFd1 to XLXI_23/u5/rasTimer_r_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y44.BQ      Tcko                  0.198   XLXI_23/u5/state_r_FSM_FFd3
+                                                       XLXI_23/u5/state_r_FSM_FFd1
+    SLICE_X22Y41.C4      net (fanout=26)       0.436   XLXI_23/u5/state_r_FSM_FFd1
+    SLICE_X22Y41.C       Tilo                  0.156   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/_n0427_inv1
+    SLICE_X22Y41.CE      net (fanout=1)        0.011   XLXI_23/u5/_n0427_inv
+    SLICE_X22Y41.CLK     Tckce       (-Th)     0.092   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.709ns (0.262ns logic, 0.447ns route)
+                                                       (37.0% logic, 63.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_23/u5/rasTimer_r_0 (SLICE_X22Y41.CE), 19 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.385ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u5/rasTimer_r_0 (FF)
+  Destination:          XLXI_23/u5/rasTimer_r_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.385ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u5/rasTimer_r_0 to XLXI_23/u5/rasTimer_r_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y41.BMUX    Tshcko                0.266   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_0
+    SLICE_X22Y41.C6      net (fanout=4)        0.041   XLXI_23/u5/rasTimer_r<0>
+    SLICE_X22Y41.C       Tilo                  0.156   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/_n0427_inv1
+    SLICE_X22Y41.CE      net (fanout=1)        0.011   XLXI_23/u5/_n0427_inv
+    SLICE_X22Y41.CLK     Tckce       (-Th)     0.089   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.385ns (0.333ns logic, 0.052ns route)
+                                                       (86.5% logic, 13.5% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.495ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u5/rasTimer_r_1 (FF)
+  Destination:          XLXI_23/u5/rasTimer_r_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.495ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u5/rasTimer_r_1 to XLXI_23/u5/rasTimer_r_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y41.AQ      Tcko                  0.234   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_1
+    SLICE_X22Y41.C3      net (fanout=3)        0.183   XLXI_23/u5/rasTimer_r<1>
+    SLICE_X22Y41.C       Tilo                  0.156   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/_n0427_inv1
+    SLICE_X22Y41.CE      net (fanout=1)        0.011   XLXI_23/u5/_n0427_inv
+    SLICE_X22Y41.CLK     Tckce       (-Th)     0.089   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.495ns (0.301ns logic, 0.194ns route)
+                                                       (60.8% logic, 39.2% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.705ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_23/u5/state_r_FSM_FFd1 (FF)
+  Destination:          XLXI_23/u5/rasTimer_r_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.712ns (Levels of Logic = 1)
+  Clock Path Skew:      0.007ns (0.120 - 0.113)
+  Source Clock:         sdClkFb_i_BUFGP rising at 40.000ns
+  Destination Clock:    sdClkFb_i_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: XLXI_23/u5/state_r_FSM_FFd1 to XLXI_23/u5/rasTimer_r_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y44.BQ      Tcko                  0.198   XLXI_23/u5/state_r_FSM_FFd3
+                                                       XLXI_23/u5/state_r_FSM_FFd1
+    SLICE_X22Y41.C4      net (fanout=26)       0.436   XLXI_23/u5/state_r_FSM_FFd1
+    SLICE_X22Y41.C       Tilo                  0.156   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/_n0427_inv1
+    SLICE_X22Y41.CE      net (fanout=1)        0.011   XLXI_23/u5/_n0427_inv
+    SLICE_X22Y41.CLK     Tckce       (-Th)     0.089   XLXI_23/u5/rasTimer_r<1>
+                                                       XLXI_23/u5/rasTimer_r_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.712ns (0.265ns logic, 0.447ns route)
+                                                       (37.2% logic, 62.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sdClkFb_i = PERIOD TIMEGRP "sdClkFb_i" 25 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 37.334ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: sdClkFb_i_BUFGP/BUFG/I0
+  Logical resource: sdClkFb_i_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X2Y4.I0
+  Clock network: sdClkFb_i_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 38.743ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.257ns (795.545MHz) (Tcp)
+  Physical resource: XLXI_35/XLXI_2/XLXI_140/DO_B<28>/CLK
+  Logical resource: XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array1/CLK
+  Location pin: SLICE_X10Y7.CLK
+  Clock network: sdClkFb_i_BUFGP
+--------------------------------------------------------------------------------
+Slack: 38.743ns (period - min period limit)
+  Period: 40.000ns
+  Min period limit: 1.257ns (795.545MHz) (Tcp)
+  Physical resource: XLXI_35/XLXI_2/XLXI_140/DO_B<28>/CLK
+  Logical resource: XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array18/CLK
+  Location pin: SLICE_X10Y7.CLK
+  Clock network: sdClkFb_i_BUFGP
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_XLXI_23_u0_genClkP_s = PERIOD TIMEGRP 
+"XLXI_23_u0_genClkP_s" TS_fpgaClk_i *         5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.666ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_XLXI_23_u0_genClkP_s = PERIOD TIMEGRP "XLXI_23_u0_genClkP_s" TS_fpgaClk_i *
+        5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - min period limit)
+  Period: 16.666ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: XLXI_23/u0/genClkP_s_BUFG/I0
+  Logical resource: XLXI_23/u0/genClkP_s_BUFG/I0
+  Location pin: BUFGMUX_X2Y3.I0
+  Clock network: XLXI_23/u0/genClkP_s
+--------------------------------------------------------------------------------
+Slack: 14.417ns (period - min period limit)
+  Period: 16.666ns
+  Min period limit: 2.249ns (444.642MHz) (Tockper)
+  Physical resource: sdClk_o_OBUF/CLK0
+  Logical resource: XLXI_23/u0/u1/u1/CK0
+  Location pin: OLOGIC_X23Y34.CLK0
+  Clock network: XLXI_23/u0/genClkP_s_BUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_XLXI_23_u0_genClkN_s = PERIOD TIMEGRP 
+"XLXI_23_u0_genClkN_s" TS_fpgaClk_i *         5 PHASE 8.33333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.666ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_XLXI_23_u0_genClkN_s = PERIOD TIMEGRP "XLXI_23_u0_genClkN_s" TS_fpgaClk_i *
+        5 PHASE 8.33333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - min period limit)
+  Period: 16.666ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: XLXI_23/u0/genClkN_s_BUFG/I0
+  Logical resource: XLXI_23/u0/genClkN_s_BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: XLXI_23/u0/genClkN_s
+--------------------------------------------------------------------------------
+Slack: 14.626ns (period - min period limit)
+  Period: 16.666ns
+  Min period limit: 2.040ns (490.196MHz) (Tockper)
+  Physical resource: sdClk_o_OBUF/CLK1
+  Logical resource: XLXI_23/u0/u1/u1/CK1
+  Location pin: OLOGIC_X23Y34.CLK1
+  Clock network: XLXI_23/u0/genClkN_s_BUFG
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_fpgaClk_i
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_fpgaClk_i                   |     83.333ns|     32.000ns|     13.330ns|            0|            0|            0|            0|
+| TS_XLXI_23_u0_genClkP_s       |     16.667ns|      2.666ns|          N/A|            0|            0|            0|            0|
+| TS_XLXI_23_u0_genClkN_s       |     16.667ns|      2.666ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock sdClkFb_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sdClkFb_i      |   39.494|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 5641058433766 paths, 0 nets, and 9323 connections
+
+Design statistics:
+   Minimum period:  39.494ns{1}   (Maximum frequency:  25.320MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Apr 04 16:28:01 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4637 MB
+
+
+

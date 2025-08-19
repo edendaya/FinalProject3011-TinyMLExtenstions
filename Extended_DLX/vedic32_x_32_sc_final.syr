@@ -1,0 +1,178 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Reading design: vedic32_x_32_sc_final.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vedic32_x_32_sc_final.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vedic32_x_32_sc_final"
+Output Format                      : NGC
+Target Device                      : xc6slx25-2-ftg256
+
+---- Source Options
+Top Module Name                    : vedic32_x_32_sc_final
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic4_x_4_sc.v" into library work
+Parsing module <vedic4_x_4_sc>.
+WARNING:HDLCompiler:751 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic4_x_4_sc.v" Line 31: Redeclaration of ansi port c is not allowed
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa8bit_sc.v" into library work
+Parsing module <fa8bit_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa12bit_sc.v" into library work
+Parsing module <fa12bit_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic8_x_8_sc.v" into library work
+Parsing module <vedic8_x_8_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa24bit_sc.v" into library work
+Parsing module <fa24bit_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic16_x_16_sc.v" into library work
+Parsing module <vedic16_x_16_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa48bit_sc.v" into library work
+Parsing module <fa48bit_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa32bit_sc.v" into library work
+Parsing module <fa32bit_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc.v" into library work
+Parsing module <vedic32_x_32_sc>.
+Analyzing Verilog file "C:\Users\ron\Downloads\13.3\try2\finally_work\twoscomplement_32bit.v" into library work
+Parsing module <twoscomplement_32bit>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\halfadder_sc.vhf" into library work
+Parsing entity <halfadder_sc>.
+Parsing architecture <BEHAVIORAL> of entity <halfadder_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\fulladd_sc.vhf" into library work
+Parsing entity <fulladd_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fulladd_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic2_x_2_sc.vhf" into library work
+Parsing entity <halfadder_sc_MUSER_vedic2_x_2_sc>.
+Parsing architecture <BEHAVIORAL> of entity <halfadder_sc_muser_vedic2_x_2_sc>.
+Parsing entity <vedic2_x_2_sc>.
+Parsing architecture <BEHAVIORAL> of entity <vedic2_x_2_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa_6bit_sc.vhf" into library work
+Parsing entity <fulladd_sc_MUSER_fa_6bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fulladd_sc_muser_fa_6bit_sc>.
+Parsing entity <fa_6bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fa_6bit_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa_4bit_sc.vhf" into library work
+Parsing entity <fulladd_sc_MUSER_fa_4bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fulladd_sc_muser_fa_4bit_sc>.
+Parsing entity <fa_4bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fa_4bit_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\fa16bit_sc.vhf" into library work
+Parsing entity <fulladd_sc_MUSER_fa16bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fulladd_sc_muser_fa16bit_sc>.
+Parsing entity <fa_4bit_sc_MUSER_fa16bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fa_4bit_sc_muser_fa16bit_sc>.
+Parsing entity <fa16bit_sc>.
+Parsing architecture <BEHAVIORAL> of entity <fa16bit_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_signed_sc.vhf" into library work
+Parsing entity <vedic32_x_32_signed_sc>.
+Parsing architecture <BEHAVIORAL> of entity <vedic32_x_32_signed_sc>.
+Parsing VHDL file "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" into library work
+Parsing entity <vedic32_x_32_signed_sc_MUSER_vedic32_x_32_sc_final>.
+Parsing architecture <BEHAVIORAL> of entity <vedic32_x_32_signed_sc_muser_vedic32_x_32_sc_final>.
+Parsing entity <vedic32_x_32_sc_final>.
+ERROR:HDLCompiler:806 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" Line 96: Syntax error near ")".
+ERROR:HDLCompiler:806 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" Line 102: Syntax error near "component".
+ERROR:HDLCompiler:806 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" Line 106: Syntax error near "component".
+ERROR:HDLCompiler:69 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" Line 109: <vedic32_x_32_signed_sc_muser_vedic32_x_32_sc_final> is not declared.
+ERROR:HDLCompiler:580 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" Line 114: Mismatch on label ; expected vedic32_x_32_sc_final
+ERROR:HDLCompiler:854 - "C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf" Line 95: Unit <vedic32_x_32_sc_final> ignored due to previous errors.
+VHDL file C:\Users\ron\Downloads\13.3\try2\finally_work\vedic32_x_32_sc_final.vhf ignored due to errors
+--> 
+
+Total memory usage is 4466164 kilobytes
+
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

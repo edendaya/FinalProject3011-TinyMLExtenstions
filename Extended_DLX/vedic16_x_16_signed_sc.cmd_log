@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/ron/Downloads/13.3/try2/finally_work/vedic16_x_16_signed_sc.xst" -ofn "C:/Users/ron/Downloads/13.3/try2/finally_work/vedic16_x_16_signed_sc.syr" 
+xst -intstyle ise -ifn "C:/Users/ron/Downloads/13.3/try2/finally_work/vedic16_x_16_signed_sc.xst" -ofn "C:/Users/ron/Downloads/13.3/try2/finally_work/vedic16_x_16_signed_sc.syr" 

@@ -1,0 +1,535 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Apr 04 16:27:30 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sdAddr_o<0>" LOCATE = SITE "E4" LEVEL 1;
+COMP "sdAddr_o<1>" LOCATE = SITE "E3" LEVEL 1;
+COMP "sdAddr_o<2>" LOCATE = SITE "D3" LEVEL 1;
+COMP "sdAddr_o<3>" LOCATE = SITE "C3" LEVEL 1;
+COMP "sdAddr_o<4>" LOCATE = SITE "B12" LEVEL 1;
+COMP "sdAddr_o<5>" LOCATE = SITE "A12" LEVEL 1;
+COMP "sdAddr_o<6>" LOCATE = SITE "D12" LEVEL 1;
+COMP "sdAddr_o<7>" LOCATE = SITE "E12" LEVEL 1;
+COMP "sdAddr_o<8>" LOCATE = SITE "G16" LEVEL 1;
+COMP "sdAddr_o<9>" LOCATE = SITE "G12" LEVEL 1;
+COMP "sdAddr_o<10>" LOCATE = SITE "F4" LEVEL 1;
+COMP "sdAddr_o<11>" LOCATE = SITE "G11" LEVEL 1;
+COMP "sdAddr_o<12>" LOCATE = SITE "H13" LEVEL 1;
+COMP "fpgaClk_i" LOCATE = SITE "A9" LEVEL 1;
+COMP "sdClkFb_i" LOCATE = SITE "K12" LEVEL 1;
+COMP "sdBs_o<0>" LOCATE = SITE "H3" LEVEL 1;
+COMP "sdBs_o<1>" LOCATE = SITE "G3" LEVEL 1;
+COMP "sdCe_bo" LOCATE = SITE "H4" LEVEL 1;
+COMP "sdCke_o" LOCATE = SITE "J12" LEVEL 1;
+COMP "sdClk_o" LOCATE = SITE "K11" LEVEL 1;
+COMP "sdWe_bo" LOCATE = SITE "M3" LEVEL 1;
+COMP "sdData_io<0>" LOCATE = SITE "P6" LEVEL 1;
+COMP "sdData_io<1>" LOCATE = SITE "T6" LEVEL 1;
+COMP "sdData_io<2>" LOCATE = SITE "T5" LEVEL 1;
+COMP "sdData_io<3>" LOCATE = SITE "P5" LEVEL 1;
+COMP "sdData_io<4>" LOCATE = SITE "R5" LEVEL 1;
+COMP "sdData_io<5>" LOCATE = SITE "N5" LEVEL 1;
+COMP "sdData_io<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "sdData_io<7>" LOCATE = SITE "N4" LEVEL 1;
+COMP "sdData_io<8>" LOCATE = SITE "P12" LEVEL 1;
+COMP "sdData_io<9>" LOCATE = SITE "R12" LEVEL 1;
+COMP "sdCas_bo" LOCATE = SITE "L3" LEVEL 1;
+COMP "sdDqmh_o" LOCATE = SITE "L13" LEVEL 1;
+COMP "sdDqml_o" LOCATE = SITE "M4" LEVEL 1;
+COMP "sdRas_bo" LOCATE = SITE "L4" LEVEL 1;
+COMP "sdData_io<10>" LOCATE = SITE "T13" LEVEL 1;
+COMP "sdData_io<11>" LOCATE = SITE "T14" LEVEL 1;
+COMP "sdData_io<12>" LOCATE = SITE "R14" LEVEL 1;
+COMP "sdData_io<13>" LOCATE = SITE "T15" LEVEL 1;
+COMP "sdData_io<14>" LOCATE = SITE "T12" LEVEL 1;
+COMP "sdData_io<15>" LOCATE = SITE "P11" LEVEL 1;
+TIMEGRP sdClkFb_i = BEL "XLXI_23/u4/u1/prevCtrlIn_v" BEL
+        "XLXI_23/u4/u0/prevCtrlIn_v" BEL "XLXI_23/u4/u0/UCtrlSync/sync_r_2"
+        BEL "XLXI_23/u4/u0/UCtrlSync/sync_r_1" BEL
+        "XLXI_23/u4/u1/UCtrlSync/sync_r_2" BEL
+        "XLXI_23/u4/u1/UCtrlSync/sync_r_1" BEL "XLXI_23/u5/state_r_FSM_FFd1"
+        BEL "XLXI_23/u5/state_r_FSM_FFd2" BEL "XLXI_23/u5/state_r_FSM_FFd3"
+        BEL "XLXI_23/u5/nopCntr_r_13" BEL "XLXI_23/u5/nopCntr_r_12" BEL
+        "XLXI_23/u5/nopCntr_r_11" BEL "XLXI_23/u5/nopCntr_r_10" BEL
+        "XLXI_23/u5/nopCntr_r_9" BEL "XLXI_23/u5/nopCntr_r_8" BEL
+        "XLXI_23/u5/nopCntr_r_7" BEL "XLXI_23/u5/nopCntr_r_6" BEL
+        "XLXI_23/u5/nopCntr_r_5" BEL "XLXI_23/u5/nopCntr_r_4" BEL
+        "XLXI_23/u5/nopCntr_r_3" BEL "XLXI_23/u5/nopCntr_r_2" BEL
+        "XLXI_23/u5/nopCntr_r_1" BEL "XLXI_23/u5/nopCntr_r_0" BEL
+        "XLXI_23/u5/timer_r_13" BEL "XLXI_23/u5/timer_r_12" BEL
+        "XLXI_23/u5/timer_r_11" BEL "XLXI_23/u5/timer_r_10" BEL
+        "XLXI_23/u5/timer_r_9" BEL "XLXI_23/u5/timer_r_8" BEL
+        "XLXI_23/u5/timer_r_7" BEL "XLXI_23/u5/timer_r_6" BEL
+        "XLXI_23/u5/timer_r_5" BEL "XLXI_23/u5/timer_r_4" BEL
+        "XLXI_23/u5/timer_r_3" BEL "XLXI_23/u5/timer_r_2" BEL
+        "XLXI_23/u5/timer_r_1" BEL "XLXI_23/u5/timer_r_0" BEL
+        "XLXI_23/u5/wrTimer_r_0" BEL "XLXI_23/u5/rfshCntr_r_13" BEL
+        "XLXI_23/u5/rfshCntr_r_12" BEL "XLXI_23/u5/rfshCntr_r_11" BEL
+        "XLXI_23/u5/rfshCntr_r_10" BEL "XLXI_23/u5/rfshCntr_r_9" BEL
+        "XLXI_23/u5/rfshCntr_r_8" BEL "XLXI_23/u5/rfshCntr_r_7" BEL
+        "XLXI_23/u5/rfshCntr_r_6" BEL "XLXI_23/u5/rfshCntr_r_5" BEL
+        "XLXI_23/u5/rfshCntr_r_4" BEL "XLXI_23/u5/rfshCntr_r_3" BEL
+        "XLXI_23/u5/rfshCntr_r_2" BEL "XLXI_23/u5/rfshCntr_r_1" BEL
+        "XLXI_23/u5/rfshCntr_r_0" BEL "XLXI_23/u5/sAddr_r_12" BEL
+        "XLXI_23/u5/sAddr_r_11" BEL "XLXI_23/u5/sAddr_r_10" BEL
+        "XLXI_23/u5/sAddr_r_9" BEL "XLXI_23/u5/sAddr_r_8" BEL
+        "XLXI_23/u5/sAddr_r_7" BEL "XLXI_23/u5/sAddr_r_6" BEL
+        "XLXI_23/u5/sAddr_r_5" BEL "XLXI_23/u5/sAddr_r_4" BEL
+        "XLXI_23/u5/sAddr_r_3" BEL "XLXI_23/u5/sAddr_r_2" BEL
+        "XLXI_23/u5/sAddr_r_1" BEL "XLXI_23/u5/sAddr_r_0" BEL
+        "XLXI_23/u5/sDataDir_r" BEL "XLXI_23/u5/cke_r" BEL
+        "XLXI_23/u5/rdPipeline_r_4" BEL "XLXI_23/u5/rdPipeline_r_3" BEL
+        "XLXI_23/u5/rdPipeline_r_2" BEL "XLXI_23/u5/rdPipeline_r_1" BEL
+        "XLXI_23/u5/rdPipeline_r_0" BEL "XLXI_23/u5/rasTimer_r_1" BEL
+        "XLXI_23/u5/rasTimer_r_0" BEL "XLXI_23/u5/activeFlag_r_0" BEL
+        "XLXI_23/u5/refTimer_r_8" BEL "XLXI_23/u5/refTimer_r_7" BEL
+        "XLXI_23/u5/refTimer_r_6" BEL "XLXI_23/u5/refTimer_r_5" BEL
+        "XLXI_23/u5/refTimer_r_4" BEL "XLXI_23/u5/refTimer_r_3" BEL
+        "XLXI_23/u5/refTimer_r_2" BEL "XLXI_23/u5/refTimer_r_1" BEL
+        "XLXI_23/u5/refTimer_r_0" BEL "XLXI_23/u5/cmd_r_4" BEL
+        "XLXI_23/u5/cmd_r_3" BEL "XLXI_23/u5/cmd_r_2" BEL
+        "XLXI_23/u5/activeRow_r_0_12" BEL "XLXI_23/u5/activeRow_r_0_11" BEL
+        "XLXI_23/u5/activeRow_r_0_10" BEL "XLXI_23/u5/activeRow_r_0_9" BEL
+        "XLXI_23/u5/activeRow_r_0_8" BEL "XLXI_23/u5/activeRow_r_0_7" BEL
+        "XLXI_23/u5/activeRow_r_0_6" BEL "XLXI_23/u5/activeRow_r_0_5" BEL
+        "XLXI_23/u5/activeRow_r_0_4" BEL "XLXI_23/u5/activeRow_r_0_3" BEL
+        "XLXI_23/u5/activeRow_r_0_2" BEL "XLXI_23/u5/activeRow_r_0_1" BEL
+        "XLXI_23/u5/activeRow_r_0_0" BEL "XLXI_23/u2/Rst_proc.resetCnt_v_2"
+        BEL "XLXI_23/u2/Rst_proc.resetCnt_v_1" BEL
+        "XLXI_23/u2/Rst_proc.resetCnt_v_0" BEL
+        "XLXI_23/u2/curr_state_FSM_FFd2" BEL "XLXI_23/u2/curr_state_FSM_FFd3"
+        BEL "XLXI_23/u2/curr_state_FSM_FFd1" BEL "XLXI_23/u2/data_out_s_31"
+        BEL "XLXI_23/u2/data_out_s_30" BEL "XLXI_23/u2/data_out_s_29" BEL
+        "XLXI_23/u2/data_out_s_28" BEL "XLXI_23/u2/data_out_s_27" BEL
+        "XLXI_23/u2/data_out_s_26" BEL "XLXI_23/u2/data_out_s_25" BEL
+        "XLXI_23/u2/data_out_s_24" BEL "XLXI_23/u2/data_out_s_23" BEL
+        "XLXI_23/u2/data_out_s_22" BEL "XLXI_23/u2/data_out_s_21" BEL
+        "XLXI_23/u2/data_out_s_20" BEL "XLXI_23/u2/data_out_s_19" BEL
+        "XLXI_23/u2/data_out_s_18" BEL "XLXI_23/u2/data_out_s_17" BEL
+        "XLXI_23/u2/data_out_s_16" BEL "XLXI_23/u2/data_out_s_15" BEL
+        "XLXI_23/u2/data_out_s_14" BEL "XLXI_23/u2/data_out_s_13" BEL
+        "XLXI_23/u2/data_out_s_12" BEL "XLXI_23/u2/data_out_s_11" BEL
+        "XLXI_23/u2/data_out_s_10" BEL "XLXI_23/u2/data_out_s_9" BEL
+        "XLXI_23/u2/data_out_s_8" BEL "XLXI_23/u2/data_out_s_7" BEL
+        "XLXI_23/u2/data_out_s_6" BEL "XLXI_23/u2/data_out_s_5" BEL
+        "XLXI_23/u2/data_out_s_4" BEL "XLXI_23/u2/data_out_s_3" BEL
+        "XLXI_23/u2/data_out_s_2" BEL "XLXI_23/u2/data_out_s_1" BEL
+        "XLXI_23/u2/data_out_s_0" BEL "XLXI_23/u2/feedback_done_1" BEL
+        "XLXI_23/u2/feedback_done_0" BEL "XLXI_23/u2/prev_state_2" BEL
+        "XLXI_23/u2/prev_state_1" BEL "XLXI_23/u2/prev_state_0" BEL
+        "XLXI_23/u2/in_init_st_s_1" BEL "XLXI_23/u2/in_init_st_s_0" BEL
+        "XLXI_23/u2/step_en_l_s" BEL "XLXI_23/u2/data_in_s_31" BEL
+        "XLXI_23/u2/data_in_s_30" BEL "XLXI_23/u2/data_in_s_29" BEL
+        "XLXI_23/u2/data_in_s_28" BEL "XLXI_23/u2/data_in_s_27" BEL
+        "XLXI_23/u2/data_in_s_26" BEL "XLXI_23/u2/data_in_s_25" BEL
+        "XLXI_23/u2/data_in_s_24" BEL "XLXI_23/u2/data_in_s_23" BEL
+        "XLXI_23/u2/data_in_s_22" BEL "XLXI_23/u2/data_in_s_21" BEL
+        "XLXI_23/u2/data_in_s_20" BEL "XLXI_23/u2/data_in_s_19" BEL
+        "XLXI_23/u2/data_in_s_18" BEL "XLXI_23/u2/data_in_s_17" BEL
+        "XLXI_23/u2/data_in_s_16" BEL "XLXI_23/u2/data_in_s_15" BEL
+        "XLXI_23/u2/data_in_s_14" BEL "XLXI_23/u2/data_in_s_13" BEL
+        "XLXI_23/u2/data_in_s_12" BEL "XLXI_23/u2/data_in_s_11" BEL
+        "XLXI_23/u2/data_in_s_10" BEL "XLXI_23/u2/data_in_s_9" BEL
+        "XLXI_23/u2/data_in_s_8" BEL "XLXI_23/u2/data_in_s_7" BEL
+        "XLXI_23/u2/data_in_s_6" BEL "XLXI_23/u2/data_in_s_5" BEL
+        "XLXI_23/u2/data_in_s_4" BEL "XLXI_23/u2/data_in_s_3" BEL
+        "XLXI_23/u2/data_in_s_2" BEL "XLXI_23/u2/data_in_s_1" BEL
+        "XLXI_23/u2/data_in_s_0" BEL "XLXI_23/u2/address_in_s_24" BEL
+        "XLXI_23/u2/address_in_s_20" BEL "XLXI_23/u2/address_in_s_19" BEL
+        "XLXI_23/u2/address_in_s_18" BEL "XLXI_23/u2/address_in_s_17" BEL
+        "XLXI_23/u2/address_in_s_16" BEL "XLXI_23/u2/address_in_s_15" BEL
+        "XLXI_23/u2/address_in_s_14" BEL "XLXI_23/u2/address_in_s_13" BEL
+        "XLXI_23/u2/address_in_s_12" BEL "XLXI_23/u2/address_in_s_11" BEL
+        "XLXI_23/u2/address_in_s_10" BEL "XLXI_23/u2/address_in_s_9" BEL
+        "XLXI_23/u2/address_in_s_8" BEL "XLXI_23/u2/address_in_s_7" BEL
+        "XLXI_23/u2/address_in_s_6" BEL "XLXI_23/u2/address_in_s_5" BEL
+        "XLXI_23/u2/address_in_s_4" BEL "XLXI_23/u2/address_in_s_3" BEL
+        "XLXI_23/u2/address_in_s_2" BEL "XLXI_23/u2/address_in_s_1" BEL
+        "XLXI_23/u2/address_in_s_0" BEL "XLXI_23/u2/reset_s" BEL
+        "XLXI_23/u2/in_init_s" BEL "XLXI_23/u2/step_en_sh_s" BEL
+        "XLXI_23/u2/Ready_clk_i_s" BEL "XLXI_23/u3/curr_state_FSM_FFd2" BEL
+        "XLXI_23/u3/curr_state_FSM_FFd1" BEL "XLXI_23/u3/done_d" BEL
+        "XLXI_23/u3/XSA_done_deasserted" BEL "XLXI_23/u3/int_DO_31" BEL
+        "XLXI_23/u3/int_DO_30" BEL "XLXI_23/u3/int_DO_29" BEL
+        "XLXI_23/u3/int_DO_28" BEL "XLXI_23/u3/int_DO_27" BEL
+        "XLXI_23/u3/int_DO_26" BEL "XLXI_23/u3/int_DO_25" BEL
+        "XLXI_23/u3/int_DO_24" BEL "XLXI_23/u3/int_DO_23" BEL
+        "XLXI_23/u3/int_DO_22" BEL "XLXI_23/u3/int_DO_21" BEL
+        "XLXI_23/u3/int_DO_20" BEL "XLXI_23/u3/int_DO_19" BEL
+        "XLXI_23/u3/int_DO_18" BEL "XLXI_23/u3/int_DO_17" BEL
+        "XLXI_23/u3/int_DO_16" BEL "XLXI_23/u3/int_DO_15" BEL
+        "XLXI_23/u3/int_DO_14" BEL "XLXI_23/u3/int_DO_13" BEL
+        "XLXI_23/u3/int_DO_12" BEL "XLXI_23/u3/int_DO_11" BEL
+        "XLXI_23/u3/int_DO_10" BEL "XLXI_23/u3/int_DO_9" BEL
+        "XLXI_23/u3/int_DO_8" BEL "XLXI_23/u3/int_DO_7" BEL
+        "XLXI_23/u3/int_DO_6" BEL "XLXI_23/u3/int_DO_5" BEL
+        "XLXI_23/u3/int_DO_4" BEL "XLXI_23/u3/int_DO_3" BEL
+        "XLXI_23/u3/int_DO_2" BEL "XLXI_23/u3/int_DO_1" BEL
+        "XLXI_23/u3/int_DO_0" BEL "XLXI_23/u3/as_d" BEL
+        "XLXI_33/XLXI_2/XLXI_4" BEL "XLXI_33/XLXI_1/XLXI_3/CNT_S_4" BEL
+        "XLXI_33/XLXI_1/XLXI_3/CNT_S_3" BEL "XLXI_33/XLXI_1/XLXI_3/CNT_S_2"
+        BEL "XLXI_33/XLXI_1/XLXI_3/CNT_S_1" BEL
+        "XLXI_33/XLXI_1/XLXI_3/CNT_S_0" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array32" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array31" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array29" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array28" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array30" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array27" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array26" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array24" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array23" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array25" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array22" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array21" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array19" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array18" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array20" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array16" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array15" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array17" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array13" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array12" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array14" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array11" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array10" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array8" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array7" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array9" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array6" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array5" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array3" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array2" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array4" BEL
+        "XLXI_33/XLXI_1/XLXI_1/Mram_memory_array1" BEL
+        "XLXI_33/XLXI_1/XLXI_32" BEL "XLXI_33/XLXI_1/XLXI_25" BEL
+        "XLXI_33/XLXI_1/XLXI_9/Q_0" BEL "XLXI_33/XLXI_1/XLXI_9/Q_1" BEL
+        "XLXI_33/XLXI_1/XLXI_9/Q_2" BEL "XLXI_33/XLXI_1/XLXI_9/Q_3" BEL
+        "XLXI_33/XLXI_1/XLXI_9/Q_4" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array31" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array30" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array32" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array28" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array27" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array29" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array25" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array24" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array26" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array22" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array21" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array23" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array19" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array18" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array20" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array16" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array15" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array17" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array13" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array12" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array14" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array11" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array10" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array9" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array8" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array6" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array5" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array7" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array3" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array2" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array4" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array32" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array31" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_1/Mram_memory_array1" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array30" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array29" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array28" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array27" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array25" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array24" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array26" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array22" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array21" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array23" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array19" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array18" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array20" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array17" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array16" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array15" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array14" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array12" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array11" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array13" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array9" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array8" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array10" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array6" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array5" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array7" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array3" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array2" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array4" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array32" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array31" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_26/Mram_memory_array1" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array29" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array28" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array30" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array26" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array25" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array27" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array24" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array23" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array22" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array21" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array19" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array18" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array20" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array16" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array15" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array17" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array13" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array12" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array14" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array11" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array10" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array9" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array8" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array6" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array5" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array7" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array3" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array2" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array4" BEL
+        "XLXI_35/XLXI_2/XLXI_140/XLXI_27/Mram_memory_array1" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_31" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_30" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_29" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_28" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_27" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_26" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_25" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_24" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_23" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_22" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_21" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_20" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_19" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_18" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_17" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_16" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_15" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_14" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_13" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_12" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_11" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_10" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_9" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_8" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_7" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_6" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_5" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_4" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_3" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_2" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_1" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_0" BEL
+        "XLXI_35/XLXI_2/XLXI_13/REG_23" BEL "XLXI_35/XLXI_2/XLXI_13/REG_22"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_21" BEL
+        "XLXI_35/XLXI_2/XLXI_13/REG_20" BEL "XLXI_35/XLXI_2/XLXI_13/REG_19"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_18" BEL
+        "XLXI_35/XLXI_2/XLXI_13/REG_17" BEL "XLXI_35/XLXI_2/XLXI_13/REG_16"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_15" BEL
+        "XLXI_35/XLXI_2/XLXI_13/REG_14" BEL "XLXI_35/XLXI_2/XLXI_13/REG_13"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_12" BEL
+        "XLXI_35/XLXI_2/XLXI_13/REG_11" BEL "XLXI_35/XLXI_2/XLXI_13/REG_10"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_9" BEL "XLXI_35/XLXI_2/XLXI_13/REG_8"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_7" BEL "XLXI_35/XLXI_2/XLXI_13/REG_6"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_5" BEL "XLXI_35/XLXI_2/XLXI_13/REG_4"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_3" BEL "XLXI_35/XLXI_2/XLXI_13/REG_2"
+        BEL "XLXI_35/XLXI_2/XLXI_13/REG_1" BEL "XLXI_35/XLXI_2/XLXI_13/REG_0"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_31" BEL "XLXI_35/XLXI_2/XLXI_7/REG_30"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_29" BEL "XLXI_35/XLXI_2/XLXI_7/REG_28"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_27" BEL "XLXI_35/XLXI_2/XLXI_7/REG_26"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_25" BEL "XLXI_35/XLXI_2/XLXI_7/REG_24"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_23" BEL "XLXI_35/XLXI_2/XLXI_7/REG_22"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_21" BEL "XLXI_35/XLXI_2/XLXI_7/REG_20"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_19" BEL "XLXI_35/XLXI_2/XLXI_7/REG_18"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_17" BEL "XLXI_35/XLXI_2/XLXI_7/REG_16"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_15" BEL "XLXI_35/XLXI_2/XLXI_7/REG_14"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_13" BEL "XLXI_35/XLXI_2/XLXI_7/REG_12"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_11" BEL "XLXI_35/XLXI_2/XLXI_7/REG_10"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_9" BEL "XLXI_35/XLXI_2/XLXI_7/REG_8"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_7" BEL "XLXI_35/XLXI_2/XLXI_7/REG_6"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_5" BEL "XLXI_35/XLXI_2/XLXI_7/REG_4"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_3" BEL "XLXI_35/XLXI_2/XLXI_7/REG_2"
+        BEL "XLXI_35/XLXI_2/XLXI_7/REG_1" BEL "XLXI_35/XLXI_2/XLXI_7/REG_0"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_31" BEL "XLXI_35/XLXI_2/REG_C/REG_30"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_29" BEL "XLXI_35/XLXI_2/REG_C/REG_28"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_27" BEL "XLXI_35/XLXI_2/REG_C/REG_26"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_25" BEL "XLXI_35/XLXI_2/REG_C/REG_24"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_23" BEL "XLXI_35/XLXI_2/REG_C/REG_22"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_21" BEL "XLXI_35/XLXI_2/REG_C/REG_20"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_19" BEL "XLXI_35/XLXI_2/REG_C/REG_18"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_17" BEL "XLXI_35/XLXI_2/REG_C/REG_16"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_15" BEL "XLXI_35/XLXI_2/REG_C/REG_14"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_13" BEL "XLXI_35/XLXI_2/REG_C/REG_12"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_11" BEL "XLXI_35/XLXI_2/REG_C/REG_10"
+        BEL "XLXI_35/XLXI_2/REG_C/REG_9" BEL "XLXI_35/XLXI_2/REG_C/REG_8" BEL
+        "XLXI_35/XLXI_2/REG_C/REG_7" BEL "XLXI_35/XLXI_2/REG_C/REG_6" BEL
+        "XLXI_35/XLXI_2/REG_C/REG_5" BEL "XLXI_35/XLXI_2/REG_C/REG_4" BEL
+        "XLXI_35/XLXI_2/REG_C/REG_3" BEL "XLXI_35/XLXI_2/REG_C/REG_2" BEL
+        "XLXI_35/XLXI_2/REG_C/REG_1" BEL "XLXI_35/XLXI_2/REG_C/REG_0" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_31" BEL "XLXI_35/XLXI_2/XLXI_5/REG_30" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_29" BEL "XLXI_35/XLXI_2/XLXI_5/REG_28" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_27" BEL "XLXI_35/XLXI_2/XLXI_5/REG_26" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_25" BEL "XLXI_35/XLXI_2/XLXI_5/REG_24" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_23" BEL "XLXI_35/XLXI_2/XLXI_5/REG_22" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_21" BEL "XLXI_35/XLXI_2/XLXI_5/REG_20" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_19" BEL "XLXI_35/XLXI_2/XLXI_5/REG_18" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_17" BEL "XLXI_35/XLXI_2/XLXI_5/REG_16" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_15" BEL "XLXI_35/XLXI_2/XLXI_5/REG_14" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_13" BEL "XLXI_35/XLXI_2/XLXI_5/REG_12" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_11" BEL "XLXI_35/XLXI_2/XLXI_5/REG_10" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_9" BEL "XLXI_35/XLXI_2/XLXI_5/REG_8" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_7" BEL "XLXI_35/XLXI_2/XLXI_5/REG_6" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_5" BEL "XLXI_35/XLXI_2/XLXI_5/REG_4" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_3" BEL "XLXI_35/XLXI_2/XLXI_5/REG_2" BEL
+        "XLXI_35/XLXI_2/XLXI_5/REG_1" BEL "XLXI_35/XLXI_2/XLXI_5/REG_0" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_31" BEL "XLXI_35/XLXI_2/XLXI_4/REG_30" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_29" BEL "XLXI_35/XLXI_2/XLXI_4/REG_28" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_27" BEL "XLXI_35/XLXI_2/XLXI_4/REG_26" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_25" BEL "XLXI_35/XLXI_2/XLXI_4/REG_24" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_23" BEL "XLXI_35/XLXI_2/XLXI_4/REG_22" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_21" BEL "XLXI_35/XLXI_2/XLXI_4/REG_20" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_19" BEL "XLXI_35/XLXI_2/XLXI_4/REG_18" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_17" BEL "XLXI_35/XLXI_2/XLXI_4/REG_16" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_15" BEL "XLXI_35/XLXI_2/XLXI_4/REG_14" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_13" BEL "XLXI_35/XLXI_2/XLXI_4/REG_12" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_11" BEL "XLXI_35/XLXI_2/XLXI_4/REG_10" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_9" BEL "XLXI_35/XLXI_2/XLXI_4/REG_8" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_7" BEL "XLXI_35/XLXI_2/XLXI_4/REG_6" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_5" BEL "XLXI_35/XLXI_2/XLXI_4/REG_4" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_3" BEL "XLXI_35/XLXI_2/XLXI_4/REG_2" BEL
+        "XLXI_35/XLXI_2/XLXI_4/REG_1" BEL "XLXI_35/XLXI_2/XLXI_4/REG_0" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_31" BEL "XLXI_35/XLXI_2/XLXI_6/REG_30" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_29" BEL "XLXI_35/XLXI_2/XLXI_6/REG_28" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_27" BEL "XLXI_35/XLXI_2/XLXI_6/REG_26" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_25" BEL "XLXI_35/XLXI_2/XLXI_6/REG_24" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_23" BEL "XLXI_35/XLXI_2/XLXI_6/REG_22" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_21" BEL "XLXI_35/XLXI_2/XLXI_6/REG_20" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_19" BEL "XLXI_35/XLXI_2/XLXI_6/REG_18" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_17" BEL "XLXI_35/XLXI_2/XLXI_6/REG_16" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_15" BEL "XLXI_35/XLXI_2/XLXI_6/REG_14" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_13" BEL "XLXI_35/XLXI_2/XLXI_6/REG_12" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_11" BEL "XLXI_35/XLXI_2/XLXI_6/REG_10" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_9" BEL "XLXI_35/XLXI_2/XLXI_6/REG_8" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_7" BEL "XLXI_35/XLXI_2/XLXI_6/REG_6" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_5" BEL "XLXI_35/XLXI_2/XLXI_6/REG_4" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_3" BEL "XLXI_35/XLXI_2/XLXI_6/REG_2" BEL
+        "XLXI_35/XLXI_2/XLXI_6/REG_1" BEL "XLXI_35/XLXI_2/XLXI_6/REG_0" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_31" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_30" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_29" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_28" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_27" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_26" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_25" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_24" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_23" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_22" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_21" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_20" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_19" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_18" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_17" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_16" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_15" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_14" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_13" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_12" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_11" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_10" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_9" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_8" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_7" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_6" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_5" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_4" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_3" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_2" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_1" BEL
+        "XLXI_35/XLXI_2/XLXI_144/XLXI_5/acc_0" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_4" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_3" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_2" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_0" BEL
+        "XLXI_35/XLXI_1/XLXI_1/current_state_FSM_FFd1" BEL
+        "XLXI_35/XLXI_1/XLXI_1/current_state_FSM_FFd2" BEL
+        "XLXI_35/XLXI_1/XLXI_1/prev_state_1" BEL
+        "XLXI_35/XLXI_1/XLXI_1/prev_state_0" BEL "XLXI_23/u4/u1/ctrlOut_o" BEL
+        "XLXI_23/u4/u1/doneOut_o" BEL "XLXI_23/u4/u0/ctrlOut_o" BEL
+        "XLXI_23/u4/u0/doneOut_o" BEL "XLXI_23/u2/done_s" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_1_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_3_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_0_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_2_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_4_1" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_29_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_4_2" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_1_2" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_0_2" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_3_2" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_2_2" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_29_2" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_15_1" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_4_3" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_1_3" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_0_3" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_3_3" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_2_3" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_29_3" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_4_4" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_1_4" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_0_4" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_3_4" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_2_4" BEL
+        "XLXI_35/XLXI_2/XLXI_142/XLXI_1/REG_29_4" BEL
+        "XLXI_35/XLXI_1/XLXI_5/next_state_4_5" BEL "sdClkFb_i_BUFGP/BUFG" BEL
+        "XLXI_23/u5/sdramData_r_15" BEL "XLXI_23/u5/sData_r_15" BEL
+        "XLXI_23/u5/sdramData_r_14" BEL "XLXI_23/u5/sData_r_14" BEL
+        "XLXI_23/u5/sdramData_r_13" BEL "XLXI_23/u5/sData_r_13" BEL
+        "XLXI_23/u5/sdramData_r_12" BEL "XLXI_23/u5/sData_r_12" BEL
+        "XLXI_23/u5/sdramData_r_11" BEL "XLXI_23/u5/sData_r_11" BEL
+        "XLXI_23/u5/sdramData_r_10" BEL "XLXI_23/u5/sData_r_10" BEL
+        "XLXI_23/u5/sdramData_r_9" BEL "XLXI_23/u5/sData_r_9" BEL
+        "XLXI_23/u5/sdramData_r_8" BEL "XLXI_23/u5/sData_r_8" BEL
+        "XLXI_23/u5/sdramData_r_7" BEL "XLXI_23/u5/sData_r_7" BEL
+        "XLXI_23/u5/sdramData_r_6" BEL "XLXI_23/u5/sData_r_6" BEL
+        "XLXI_23/u5/sdramData_r_5" BEL "XLXI_23/u5/sData_r_5" BEL
+        "XLXI_23/u5/sdramData_r_4" BEL "XLXI_23/u5/sData_r_4" BEL
+        "XLXI_23/u5/sdramData_r_3" BEL "XLXI_23/u5/sData_r_3" BEL
+        "XLXI_23/u5/sdramData_r_2" BEL "XLXI_23/u5/sData_r_2" BEL
+        "XLXI_23/u5/sdramData_r_1" BEL "XLXI_23/u5/sData_r_1" BEL
+        "XLXI_23/u5/sdramData_r_0" BEL "XLXI_23/u5/sData_r_0";
+PIN XLXI_23/u0/u1/u1_pins<1> = BEL "XLXI_23/u0/u1/u1" PINNAME CK0;
+TIMEGRP XLXI_23_u0_genClkP_s = BEL "XLXI_23/u0/genClkP_s_BUFG" PIN
+        "XLXI_23/u0/u1/u1_pins<1>";
+PIN XLXI_23/u0/u1/u1_pins<2> = BEL "XLXI_23/u0/u1/u1" PINNAME CK1;
+TIMEGRP XLXI_23_u0_genClkN_s = BEL "XLXI_23/u0/genClkN_s_BUFG" PIN
+        "XLXI_23/u0/u1/u1_pins<2>";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN XLXI_23/u0/u0_pins<3> = BEL "XLXI_23/u0/u0" PINNAME CLKIN;
+TIMEGRP fpgaClk_i = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "XLXI_23/u0/u0_pins<3>";
+TS_fpgaClk_i = PERIOD TIMEGRP "fpgaClk_i" 12 MHz HIGH 50%;
+TS_sdClkFb_i = PERIOD TIMEGRP "sdClkFb_i" 25 MHz HIGH 50%;
+TS_XLXI_23_u0_genClkP_s = PERIOD TIMEGRP "XLXI_23_u0_genClkP_s" TS_fpgaClk_i *
+        5 HIGH 50%;
+TS_XLXI_23_u0_genClkN_s = PERIOD TIMEGRP "XLXI_23_u0_genClkN_s" TS_fpgaClk_i *
+        5 PHASE 8.33333333 ns HIGH 50%;
+SCHEMATIC END;
+

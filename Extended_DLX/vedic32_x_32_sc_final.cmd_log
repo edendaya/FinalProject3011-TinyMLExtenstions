@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/ron/Downloads/13.3/try2/finally_work/vedic32_x_32_sc_final.xst" -ofn "C:/Users/ron/Downloads/13.3/try2/finally_work/vedic32_x_32_sc_final.syr" 

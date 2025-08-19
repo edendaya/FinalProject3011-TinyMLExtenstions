@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ron\Downloads\13.3\try2\finally_work\Top_Level.ncd
+OUTFILE=C:\Users\ron\Downloads\13.3\try2\finally_work\Top_Level.bit
+FAMILY=Spartan6
+PART=xc6slx25-2ftg256
+WORKINGDIR=C:\Users\ron\Downloads\13.3\try2\finally_work
+LICENSE=WebPack
+USER_INFO=210840218_0_0_270
