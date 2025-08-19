@@ -1,0 +1,9 @@
+MODULE fa_4bit_sc
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_1
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_2
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_3
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_4

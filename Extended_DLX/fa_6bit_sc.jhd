@@ -1,0 +1,13 @@
+MODULE fa_6bit_sc
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_1
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_2
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_3
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_4
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_5
+	SUBMODULE fulladd_sc
+		INSTANCE XLXI_6

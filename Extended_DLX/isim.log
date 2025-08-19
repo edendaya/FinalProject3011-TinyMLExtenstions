@@ -1,0 +1,55 @@
+ISim log file
+Running: C:\Users\edend\Downloads\finally_work_4_april\finally_work\MAC_Unit_MAC_Unit_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/edend/Downloads/finally_work_4_april/finally_work/MAC_Unit_MAC_Unit_sch_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z1/z1/, width 8 of formal port c is not equal to width 16 of actual signal q0.
+WARNING:  For instance z1/z2/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z1/z2/, width 8 of formal port c is not equal to width 16 of actual signal q1.
+WARNING:  For instance z1/z3/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z1/z3/, width 8 of formal port c is not equal to width 16 of actual signal q2.
+WARNING:  For instance z1/z4/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING:  For instance z1/z4/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z1/z4/, width 8 of formal port c is not equal to width 16 of actual signal q3.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 26.  For instance XLXI_11/z1/, width 16 of formal port c is not equal to width 32 of actual signal q0.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z2/z1/, width 8 of formal port c is not equal to width 16 of actual signal q0.
+WARNING:  For instance z2/z2/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z2/z2/, width 8 of formal port c is not equal to width 16 of actual signal q1.
+WARNING:  For instance z2/z3/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z2/z3/, width 8 of formal port c is not equal to width 16 of actual signal q2.
+WARNING:  For instance z2/z4/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING:  For instance z2/z4/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z2/z4/, width 8 of formal port c is not equal to width 16 of actual signal q3.
+WARNING:  For instance XLXI_11/z2/, width 8 of formal port a is not equal to width 16 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 26.  For instance XLXI_11/z2/, width 16 of formal port c is not equal to width 32 of actual signal q1.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z3/z1/, width 8 of formal port c is not equal to width 16 of actual signal q0.
+WARNING:  For instance z3/z2/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z3/z2/, width 8 of formal port c is not equal to width 16 of actual signal q1.
+WARNING:  For instance z3/z3/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z3/z3/, width 8 of formal port c is not equal to width 16 of actual signal q2.
+WARNING:  For instance z3/z4/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING:  For instance z3/z4/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z3/z4/, width 8 of formal port c is not equal to width 16 of actual signal q3.
+WARNING:  For instance XLXI_11/z3/, width 8 of formal port b is not equal to width 16 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 26.  For instance XLXI_11/z3/, width 16 of formal port c is not equal to width 32 of actual signal q2.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z4/z1/, width 8 of formal port c is not equal to width 16 of actual signal q0.
+WARNING:  For instance z4/z2/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z4/z2/, width 8 of formal port c is not equal to width 16 of actual signal q1.
+WARNING:  For instance z4/z3/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z4/z3/, width 8 of formal port c is not equal to width 16 of actual signal q2.
+WARNING:  For instance z4/z4/, width 4 of formal port a is not equal to width 8 of actual constant.
+WARNING:  For instance z4/z4/, width 4 of formal port b is not equal to width 8 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 26.  For instance z4/z4/, width 8 of formal port c is not equal to width 16 of actual signal q3.
+WARNING:  For instance XLXI_11/z4/, width 8 of formal port a is not equal to width 16 of actual constant.
+WARNING:  For instance XLXI_11/z4/, width 8 of formal port b is not equal to width 16 of actual constant.
+WARNING: File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 26.  For instance XLXI_11/z4/, width 16 of formal port c is not equal to width 32 of actual signal q3.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 60 ns :  in File "C:/Users/edend/Downloads/finally_work_4_april/finally_work/test_mac.v" Line 63 
+The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.

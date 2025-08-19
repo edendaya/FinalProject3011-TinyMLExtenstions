@@ -1,0 +1,76 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/edend/Downloads/finally_work_4_april/finally_work/MAC_Unit_MAC_Unit_sch_tb_isim_beh.exe -prj C:/Users/edend/Downloads/finally_work_4_april/finally_work/MAC_Unit_MAC_Unit_sch_tb_beh.prj work.MAC_Unit_MAC_Unit_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic4_x_4_sc.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic4_x_4_sc.v" Line 31: Redeclaration of ansi port c is not allowed
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa8bit_sc.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa12bit_sc.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa24bit_sc.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/twoscomplement_32bit.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/twoscomplement_16bit.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa32bit_sc.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/MUX32bit.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/Accumulator.v" into library work
+Analyzing Verilog file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/test_mac.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/halfadder_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fulladd_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic2_x_2_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa_6bit_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa_4bit_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/fa16bit_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_signed_sc.vhf" into library work
+Parsing VHDL file "C:/Users/edend/Downloads/finally_work_4_april/finally_work/MAC_Unit.vhf" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 31: Size mismatch in connection of port <c>. Formal port size is 16-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 31: Size mismatch in connection of port <c>. Formal port size is 8-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 32: Size mismatch in connection of port <a>. Formal port size is 4-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 33: Size mismatch in connection of port <b>. Formal port size is 4-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic8_x_8_sc.v" Line 34: Size mismatch in connection of port <a>. Formal port size is 4-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 32: Size mismatch in connection of port <a>. Formal port size is 8-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 33: Size mismatch in connection of port <b>. Formal port size is 8-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:189 - "C:/Users/edend/Downloads/finally_work_4_april/finally_work/vedic16_x_16_sc.v" Line 34: Size mismatch in connection of port <a>. Formal port size is 8-bit while actual signal size is 16-bit.
+Completed static elaboration
+Compiling module twoscomplement_32bit
+Compiling module vedic4_x_4_sc
+Compiling module fa8bit_sc
+Compiling module fa12bit_sc
+Compiling module vedic8_x_8_sc
+Compiling module fa24bit_sc
+Compiling module vedic16_x_16_sc
+Compiling module twoscomplement_16bit
+Compiling module MUX32bit
+Compiling module fa32bit_sc
+Compiling module Accumulator
+Compiling module MAC_Unit_MAC_Unit_sch_tb
+Compiling module glbl
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package vl_types
+Compiling architecture xor2_v of entity XOR2 [xor2_default]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture behavioral of entity halfadder_sc_MUSER_vedic2_x_2_sc [halfadder_sc_muser_vedic2_x_2_sc...]
+Compiling architecture behavioral of entity vedic2_x_2_sc [vedic2_x_2_sc_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture behavioral of entity fulladd_sc_MUSER_fa_4bit_sc [fulladd_sc_muser_fa_4bit_sc_defa...]
+Compiling architecture behavioral of entity fa_4bit_sc [fa_4bit_sc_default]
+Compiling architecture behavioral of entity fulladd_sc_MUSER_fa_6bit_sc [fulladd_sc_muser_fa_6bit_sc_defa...]
+Compiling architecture behavioral of entity fa_6bit_sc [fa_6bit_sc_default]
+Compiling architecture behavioral of entity fulladd_sc_MUSER_fa16bit_sc [fulladd_sc_muser_fa16bit_sc_defa...]
+Compiling architecture behavioral of entity fa_4bit_sc_MUSER_fa16bit_sc [fa_4bit_sc_muser_fa16bit_sc_defa...]
+Compiling architecture behavioral of entity fa16bit_sc [fa16bit_sc_default]
+Compiling architecture behavioral of entity vedic16_x_16_signed_sc_MUSER_MAC_Unit [vedic16_x_16_signed_sc_muser_mac...]
+Compiling architecture behavioral of entity MAC_Unit [mac_unit_default]
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 33 VHDL Units
+Compiled 13 Verilog Units
+Built simulation executable C:/Users/edend/Downloads/finally_work_4_april/finally_work/MAC_Unit_MAC_Unit_sch_tb_isim_beh.exe
+Fuse Memory Usage: 53732 KB
+Fuse CPU Usage: 3171 ms

@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym LSM E:/adlx/D4/SOURCE_VER/LSM.sch E:/adlx/D4/SOURCE_VER/LSM.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym LSM E:/adlx/D4/SOURCE_VER/LSM.sch E:/adlx/D4/SOURCE_VER/LSM.sym 

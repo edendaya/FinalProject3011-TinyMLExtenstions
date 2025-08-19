@@ -1,0 +1,2 @@
+sch2hdl -intstyle ise -family spartan6 -flat -suppress -vhdl MAC_Unit_drc.vhf -w E:/adlx/D4/SOURCE_VER_SUPERFINAL/MAC_Unit.sch 
+xst -intstyle ise -ifn "C:/Users/ron/Downloads/13.3/try2/finally_work/MAC_Unit.xst" -ofn "C:/Users/ron/Downloads/13.3/try2/finally_work/MAC_Unit.syr" 
