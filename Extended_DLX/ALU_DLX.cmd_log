@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym ALU_DLX E:/adlx/D4/SOURCE_VER_SUPERFINAL/ALU_DLX.sch E:/adlx/D4/SOURCE_VER_SUPERFINAL/ALU_DLX.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym ALU_DLX E:/adlx/D4/SOURCE_VER_SUPERFINAL/ALU_DLX.sch E:/adlx/D4/SOURCE_VER_SUPERFINAL/ALU_DLX.sym 

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/ron/Downloads/13.3/try2/finally_work/DLX_WITH_IOSIM.xst" -ofn "C:/Users/ron/Downloads/13.3/try2/finally_work/DLX_WITH_IOSIM.syr" 

@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+en
+=D[31:0]=
+[Outputs]
+=Q[31:0]=
+=sum_out[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Accumulator
+

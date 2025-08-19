@@ -1,0 +1,5 @@
+MODULE DLX_toplevel
+	SUBMODULE control
+		INSTANCE XLXI_1
+	SUBMODULE datapath_DLX
+		INSTANCE XLXI_2
