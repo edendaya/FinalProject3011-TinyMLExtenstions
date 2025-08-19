@@ -38,7 +38,7 @@ Contains assembly programs to **test and compare** the baseline DLX processor wi
 
 Contains extra files required to fully utilize and compile the project:
 
-- `commands.xml` – XML file containing all instructions including the newly added ones (`MUL`, `MAC`, `ReLU`).  
+- `Extended_DLX_instructions.xml` – XML file containing all instructions including the newly added ones (`MUL`, `MAC`, `ReLU`).  
   This file can be used with **RESA** or other assembly compilers to assemble programs for the extended processor.
 - `Extended_DLX.bit` – final bitstream file of the extended processor, ready to be loaded onto an FPGA.
 
