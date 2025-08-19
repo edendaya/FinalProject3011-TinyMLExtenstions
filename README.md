@@ -1,6 +1,6 @@
-# Tiny Machine Learning Extensions - Extended DLX Processor
+# Tiny Machine Learning Extensions - Final Project 3011
 
-This repository contains the files and resources for the **Extended DLX processor project**, which implements hardware extensions to accelerate inference for small neural networks. The repository is structured into three main folders:
+This repository contains the files and resources for the **Extended DLX processor project**, which implements hardware extensions to accelerate inference for neural networks. The repository is structured into three main folders:
 
 ---
 
@@ -38,7 +38,7 @@ Contains assembly programs to **test and compare** the baseline DLX processor wi
 
 Contains extra files required to fully utilize and compile the project:
 
-- `Extended_DLX_instructions.xml` – XML file containing all instructions including the newly added ones (`MUL`, `MAC`, `ReLU`).  
+- `commands.xml` – XML file containing all instructions including the newly added ones (`MUL`, `MAC`, `ReLU`).  
   This file can be used with **RESA** or other assembly compilers to assemble programs for the extended processor.
 - `Extended_DLX.bit` – final bitstream file of the extended processor, ready to be loaded onto an FPGA.
 
