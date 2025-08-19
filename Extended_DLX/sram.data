@@ -1,0 +1,31 @@
+8C01001A //	            	     lw R1 R0 data1
+AC01001D //	            	     sw R1 R0 adr2
+02220001 //	            	     addi R2 R1 0x1
+00221823 //	            	     add R3 R1 R2
+0022500E //                          MUL R10 R1 R2
+0022500C //                          relu R2 R0 R2
+0022500C //	            	     slti R6 R2 3
+0022500C //	            	     beqz R6 jump1
+0022500E //	            	     sw R4 R1 adr1
+0022500C //	jump1:      	 lw R7 R1 adr1
+6C880000 //	            	     sgei R8 R4 0
+151F0001 //	            	     bnez R8 jump2
+00442025 //	            	     or R4 R2 R4
+C3FF0004 //	jump2:      	 special-nop
+2C030012 //	            	     addi R3 R0 jump3
+5C7F6E61 //	            	     jalr R3
+00A11822 //	            	     sub R3 R5 R1
+107F0001 //	            	     beqz R3 jump4
+5BFF0F00 //	jump3:      	 jr R31
+6803FFFF //	jump4:      	 seqi R3 R0 -1
+8C02001B //	            	     lw R2 R0 data2
+74450000 //	            	     snei R5 R2 0
+78860006 //	            	     slei R6 R4 6
+00803024 //	            	     xor R6 R4 R0
+00C41025 //	            	     or R2 R6 R4
+FFFF0044 //	            	     halt
+					            	 
+00000001 //	data1:      	 dc 0x1
+EFFFFFFF //	data2:      	 dc 0xEFFFFFFF
+00000000 //	adr1:       	  dc 0x0
+00000000 //	adr2:       	  dc 0x0

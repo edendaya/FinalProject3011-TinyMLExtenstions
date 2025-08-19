@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/adlx/D4/SOURCE_VER/testmonitor.v -lang verilog -prj SOURCE_VER -o monitor_monitor_sch_tb.spl -module monitor_monitor_sch_tb -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 monitor_monitor_sch_tb.spl E:/adlx/D4/SOURCE_VER/monitor_monitor_sch_tb.sym 

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/adlx/D4/SOURCE_VER/Zeros_ext_DLX.v -lang verilog -prj SOURCE_VER -o Sign_ext_DLX.spl -module Sign_ext_DLX -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 -w Sign_ext_DLX.spl E:/adlx/D4/SOURCE_VER/Sign_ext_DLX.sym 

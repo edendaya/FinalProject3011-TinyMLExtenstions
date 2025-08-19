@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/adlx/D4/SOURCE_VER/monitor.xst" -ofn "E:/adlx/D4/SOURCE_VER/monitor.syr" 
