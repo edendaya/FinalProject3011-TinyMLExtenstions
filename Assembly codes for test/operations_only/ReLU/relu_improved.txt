@@ -1,0 +1,4 @@
+*Perform ReLU on improved dlx
+*ReLU: R1 = max(0, R1)
+
+relu R1 R1 R0

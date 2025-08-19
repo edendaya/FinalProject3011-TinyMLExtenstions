@@ -1,0 +1,43 @@
+*20 instructions are running
+beqz R0 8
+data1: dc 0x00000001
+data2: dc 0x00000002
+data3: dc 0x00000003
+data4: dc 0x00000004
+data5: dc 0x00000005
+data6: dc 0x00000006
+addr1: ds
+addr2: ds
+
+addi R7 R0 0  * Result storage
+
+lw R1 R0 data1
+lw R3 R0 data3
+lw R2 R0 data2
+lw R4 R0 data4
+
+* Compute (R1 * R3) + (R2 * R4) in R7
+macrst R7 R1 R3
+mac R7 R2 R4
+
+* Apply ReLU: R7 = max(0, R7)
+relu R7 R7 R0
+sw R7 R0 addr1
+
+* Reset result storage
+addi R7 R0 0
+
+lw R1 R0 data1
+lw R5 R0 data5
+lw R2 R0 data2
+lw R6 R0 data6
+
+* Compute (R1 * R5) + (R2 * R6) in R7
+macrst R7 R1 R5
+mac R7 R2 R6
+
+* Apply ReLU: R7 = max(0, R7)
+relu R7 R7 R0
+sw R7 R0 addr2
+
+halt

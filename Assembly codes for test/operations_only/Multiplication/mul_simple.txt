@@ -1,0 +1,16 @@
+*Perform Multiplication on simple dlx using shift and add algorithm.
+*Takes 128 instrucitions (16 iterations * 8 instruction per iteration).
+
+*Multiply R1 and R3 and put the result in R7.
+
+*mul_loop:
+and R12 R9 R3
+beqz R12 2
+add R7 R7 R1
+addi R8 R8 1
+*sll1:
+slli R1 R1
+srli R3 R3
+addi R10 R10 1
+slti R12 R10 16
+bnez R12 -9

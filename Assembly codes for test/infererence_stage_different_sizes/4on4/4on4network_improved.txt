@@ -1,0 +1,107 @@
+*62 instructions are running
+beqz R0 24
+data1: dc 0x00000001
+data2: dc 0x00000002
+data3: dc 0x00000003
+data4: dc 0x00000004
+data5: dc 0x00000005
+data6: dc 0x00000006
+data7: dc 0x00000007
+data8: dc 0x00000008
+data9: dc 0x00000009
+data10: dc 0x0000000A
+data11: dc 0x0000000B
+data12: dc 0x0000000C
+data13: dc 0x0000000D
+data14: dc 0x0000000E
+data15: dc 0x0000000F
+data16: dc 0x00000010
+data17: dc 0x00000001
+data18: dc 0x00000002
+data19: dc 0x00000003
+data20: dc 0x00000004
+addr1: ds
+addr2: ds
+addr3: ds
+addr4: ds
+
+addi R7 R0 0  * Result storage
+
+* Row 0
+lw R1 R0 data1
+lw R3 R0 data3
+lw R2 R0 data2
+lw R4 R0 data4
+lw R5 R0 data17
+lw R6 R0 data18
+lw R11 R0 data19
+lw R12 R0 data20
+
+* Compute (R1 * R5) + (R2 * R6) + (R3 * R11) + (R4 * R12) in R7
+macrst R7 R1 R5
+mac R7 R2 R6
+mac R7 R3 R11
+mac R7 R4 R12
+
+* Apply ReLU: R7 = max(0, R7)
+relu R7 R7 R0
+sw R7 R0 addr1
+
+* Reset result storage
+addi R7 R0 0
+
+* Row 1
+lw R1 R0 data5
+lw R3 R0 data7
+lw R2 R0 data6
+lw R4 R0 data8
+
+* Compute (R1 * R5) + (R2 * R6) + (R3 * R11) + (R4 * R12) in R7
+macrst R7 R1 R5
+mac R7 R2 R6
+mac R7 R3 R11
+mac R7 R4 R12
+
+* Apply ReLU: R7 = max(0, R7)
+relu R7 R7 R0
+sw R7 R0 addr2
+
+* Reset result storage
+addi R7 R0 0
+
+* Row 2
+lw R1 R0 data9
+lw R3 R0 data11
+lw R2 R0 data10
+lw R4 R0 data12
+
+* Compute (R1 * R5) + (R2 * R6) + (R3 * R11) + (R4 * R12) in R7
+macrst R7 R1 R5
+mac R7 R2 R6
+mac R7 R3 R11
+mac R7 R4 R12
+
+* Apply ReLU: R7 = max(0, R7)
+relu R7 R7 R0
+sw R7 R0 addr3
+
+* Reset result storage
+addi R7 R0 0
+
+* Row 3
+lw R1 R0 data13
+lw R3 R0 data15
+lw R2 R0 data14
+lw R4 R0 data16
+
+* Compute (R1 * R5) + (R2 * R6) + (R3 * R11) + (R4 * R12) in R7
+macrst R7 R1 R5
+mac R7 R2 R6
+mac R7 R3 R11
+mac R7 R4 R12
+
+* Apply ReLU: R7 = max(0, R7)
+relu R7 R7 R0
+sw R7 R0 addr4
+
+halt

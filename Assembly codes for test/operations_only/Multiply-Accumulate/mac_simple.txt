@@ -1,0 +1,19 @@
+*Perform Multiply - Accumulate on simple dlx.
+*Takes 129 instrucitions - 128 for multiply and 1 for accumulate.
+
+*Multiply R1 and R3 and put the result in R7, then add the result to R13.
+
+*mul_loop:
+and R12 R9 R3
+beqz R12 2
+add R7 R7 R1
+addi R8 R8 1
+*sll1:
+slli R1 R1
+srli R3 R3
+addi R10 R10 1
+slti R12 R10 16
+bnez R12 -9
+
+*accumulate the result assuming R13 has the previous result
+add R13 R7 R13

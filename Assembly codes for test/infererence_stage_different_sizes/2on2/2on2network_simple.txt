@@ -1,0 +1,175 @@
+*579 instructions are running
+beqz R0 7
+data1: dc 0x00000001
+data2: dc 0x00000002
+data3: dc 0xFFFFFFF6 *-10
+data4: dc 0x00000004
+data5: dc 0x00000005
+data6: dc 0x00000006
+addr1: ds
+addr2: ds
+addi R7 R0 0   * Result storage
+addi R8 R0 0   * Temp storage
+addi R9 R0 1   * Mask for AND operation
+addi R10 R0 0  * Loop counter
+addi R11 R0 15 * Iteration count for shifts
+
+lw R1 R0 data1
+lw R3 R0 data3
+lw R2 R0 data2
+lw R4 R0 data4
+
+* Multiplication 1: R1 * R3 (signed)
+addi R16 R0 8000
+and R13 R1 R16
+and R14 R3 R16
+xor R15 R13 R14
+beqz R13 1
+sub R1 R0 R1
+*skip_neg1:
+beqz R14 1
+sub R3 R0 R3
+*skip_neg2:
+
+*mul1_loop:
+and R12 R9 R3
+beqz R12 2
+add R7 R7 R1
+addi R8 R8 1
+*sll1:
+slli R1 R1
+srli R3 R3
+addi R10 R10 1
+slti R12 R10 16
+bnez R12 -9
+
+beqz R15 1
+sub R7 R0 R7
+*skip_sign1:
+
+* Reset counters
+addi R10 R0 0
+addi R8 R0 0
+
+* Multiplication 2: R2 * R4 (signed)
+addi R16 R0 8000
+and R13 R2 R16
+and R14 R4 R16
+xor R15 R13 R14
+beqz R13 1
+sub R2 R0 R2
+*skip_neg3:
+beqz R14 1
+sub R4 R0 R4
+*skip_neg4:
+
+*mul2_loop:
+and R12 R9 R4
+beqz R12 2
+add R8 R8 R2
+addi R10 R10 1
+*sll2:
+slli R2 R2
+srli R4 R4
+addi R11 R11 -1
+bnez R11 -8
+
+beqz R15 1
+sub R8 R0 R8
+*skip_sign2:
+
+* Sum results: R7 = (R1 * R3) + (R2 * R4)
+add R26 R7 R0
+add R27 R8 R0
+add R7 R7 R8
+add R28 R7 R0
+* ReLU: if R7 < 0, set to 0
+slti R13 R7 0
+beqz R13 1
+addi R7 R0 0
+*relu1_skip:
+sw R7 R0 addr1
+
+* Reset registers
+addi R7 R0 0
+addi R8 R0 0
+addi R10 R0 0
+addi R11 R0 15
+
+lw R1 R0 data1
+lw R5 R0 data5
+lw R2 R0 data2
+lw R6 R0 data6
+
+* Multiplication 3: R1 * R5 (signed)
+addi R16 R0 8000
+and R13 R1 R16
+and R14 R5 R16
+xor R15 R13 R14
+beqz R13 1
+sub R1 R0 R1
+*skip_neg5:
+beqz R14 1
+sub R5 R0 R5
+*skip_neg6:
+
+*mul3_loop:
+and R12 R9 R5
+beqz R12 2
+add R7 R7 R1
+addi R8 R8 1
+*sll3:
+slli R1 R1
+srli R5 R5
+addi R10 R10 1
+slti R12 R10 16
+bnez R12 -9
+
+beqz R15 1
+sub R7 R0 R7
+*skip_sign3:
+
+* Reset counters
+addi R10 R0 0
+addi R8 R0 0
+
+* Multiplication 4: R2 * R6 (signed)
+addi R16 R0 8000
+and R13 R2 R16
+and R14 R6 R16
+xor R15 R13 R14
+beqz R13 1
+sub R2 R0 R2
+*skip_neg7:
+beqz R14 1
+sub R6 R0 R6
+*skip_neg8:
+
+*mul4_loop:
+and R12 R9 R6
+beqz R12 2
+add R8 R8 R2
+addi R10 R10 1
+*sll4:
+slli R2 R2
+srli R6 R6
+addi R11 R11 -1
+bnez R11 -8
+
+beqz R15 1
+sub R8 R0 R8
+*skip_sign4:
+
+* Sum results: R7 = (R1 * R5) + (R2 * R6)
+add R29 R7 R0
+add R30 R8 R0
+add R7 R7 R8
+add R31 R7 R0
+* ReLU: if R7 < 0, set to 0
+slti R13 R7 0
+beqz R13 1
+addi R7 R0 0
+*relu2_skip:
+sw R7 R0 addr2
+
+halt

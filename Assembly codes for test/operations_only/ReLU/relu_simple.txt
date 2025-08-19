@@ -1,0 +1,7 @@
+*Perform ReLU on simple dlx
+*Takes 3 instrucitions.
+
+* ReLU: if R1 < 0, set R1 to 0. else, R1 remains the same.
+slti R2 R1 0
+beqz R2 1
+addi R1 R0 0

@@ -1,0 +1,4 @@
+*Perform Multiply - Accumulate on improved dlx.
+*Multiply R1 and R2 and add the result to R3. Assuming R3 has the previous result.
+
+mac R3 R2 R1

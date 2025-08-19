@@ -1,0 +1,416 @@
+* 66885 instructions are running
+*16x16 matrix-vector multiplication for neural network inference (one row shown) on simple dlx.
+beqz R0 288
+
+* --- Data section: 16x16 matrix (row-major) ---
+data1: dc 0x01
+data2: dc 0x02
+data3: dc 0x03
+data4: dc 0x04
+data5: dc 0x05
+data6: dc 0x06
+data7: dc 0x07
+data8: dc 0x08
+data9: dc 0x09
+data10: dc 0x0A
+data11: dc 0x0B
+data12: dc 0x0C
+data13: dc 0x0D
+data14: dc 0x0E
+data15: dc 0x0F
+data16: dc 0x10
+data17: dc 0x11
+data18: dc 0x12
+data19: dc 0x13
+data20: dc 0x14
+data21: dc 0x15
+data22: dc 0x16
+data23: dc 0x17
+data24: dc 0x18
+data25: dc 0x19
+data26: dc 0x1A
+data27: dc 0x1B
+data28: dc 0x1C
+data29: dc 0x1D
+data30: dc 0x1E
+data31: dc 0x1F
+data32: dc 0x20
+data33: dc 0x21
+data34: dc 0x22
+data35: dc 0x23
+data36: dc 0x24
+data37: dc 0x25
+data38: dc 0x26
+data39: dc 0x27
+data40: dc 0x28
+data41: dc 0x29
+data42: dc 0x2A
+data43: dc 0x2B
+data44: dc 0x2C
+data45: dc 0x2D
+data46: dc 0x2E
+data47: dc 0x2F
+data48: dc 0x30
+data49: dc 0x31
+data50: dc 0x32
+data51: dc 0x33
+data52: dc 0x34
+data53: dc 0x35
+data54: dc 0x36
+data55: dc 0x37
+data56: dc 0x38
+data57: dc 0x39
+data58: dc 0x3A
+data59: dc 0x3B
+data60: dc 0x3C
+data61: dc 0x3D
+data62: dc 0x3E
+data63: dc 0x3F
+data64: dc 0x40
+data65: dc 0x41
+data66: dc 0x42
+data67: dc 0x43
+data68: dc 0x44
+data69: dc 0x45
+data70: dc 0x46
+data71: dc 0x47
+data72: dc 0x48
+data73: dc 0x49
+data74: dc 0x4A
+data75: dc 0x4B
+data76: dc 0x4C
+data77: dc 0x4D
+data78: dc 0x4E
+data79: dc 0x4F
+data80: dc 0x50
+data81: dc 0x51
+data82: dc 0x52
+data83: dc 0x53
+data84: dc 0x54
+data85: dc 0x55
+data86: dc 0x56
+data87: dc 0x57
+data88: dc 0x58
+data89: dc 0x59
+data90: dc 0x5A
+data91: dc 0x5B
+data92: dc 0x5C
+data93: dc 0x5D
+data94: dc 0x5E
+data95: dc 0x5F
+data96: dc 0x60
+data97: dc 0x61
+data98: dc 0x62
+data99: dc 0x63
+data100: dc 0x64
+data101: dc 0x65
+data102: dc 0x66
+data103: dc 0x67
+data104: dc 0x68
+data105: dc 0x69
+data106: dc 0x6A
+data107: dc 0x6B
+data108: dc 0x6C
+data109: dc 0x6D
+data110: dc 0x6E
+data111: dc 0x6F
+data112: dc 0x70
+data113: dc 0x71
+data114: dc 0x72
+data115: dc 0x73
+data116: dc 0x74
+data117: dc 0x75
+data118: dc 0x76
+data119: dc 0x77
+data120: dc 0x78
+data121: dc 0x79
+data122: dc 0x7A
+data123: dc 0x7B
+data124: dc 0x7C
+data125: dc 0x7D
+data126: dc 0x7E
+data127: dc 0x7F
+data128: dc 0x80
+data129: dc 0x81
+data130: dc 0x82
+data131: dc 0x83
+data132: dc 0x84
+data133: dc 0x85
+data134: dc 0x86
+data135: dc 0x87
+data136: dc 0x88
+data137: dc 0x89
+data138: dc 0x8A
+data139: dc 0x8B
+data140: dc 0x8C
+data141: dc 0x8D
+data142: dc 0x8E
+data143: dc 0x8F
+data144: dc 0x90
+data145: dc 0x91
+data146: dc 0x92
+data147: dc 0x93
+data148: dc 0x94
+data149: dc 0x95
+data150: dc 0x96
+data151: dc 0x97
+data152: dc 0x98
+data153: dc 0x99
+data154: dc 0x9A
+data155: dc 0x9B
+data156: dc 0x9C
+data157: dc 0x9D
+data158: dc 0x9E
+data159: dc 0x9F
+data160: dc 0xA0
+data161: dc 0xA1
+data162: dc 0xA2
+data163: dc 0xA3
+data164: dc 0xA4
+data165: dc 0xA5
+data166: dc 0xA6
+data167: dc 0xA7
+data168: dc 0xA8
+data169: dc 0xA9
+data170: dc 0xAA
+data171: dc 0xAB
+data172: dc 0xAC
+data173: dc 0xAD
+data174: dc 0xAE
+data175: dc 0xAF
+data176: dc 0xB0
+data177: dc 0xB1
+data178: dc 0xB2
+data179: dc 0xB3
+data180: dc 0xB4
+data181: dc 0xB5
+data182: dc 0xB6
+data183: dc 0xB7
+data184: dc 0xB8
+data185: dc 0xB9
+data186: dc 0xBA
+data187: dc 0xBB
+data188: dc 0xBC
+data189: dc 0xBD
+data190: dc 0xBE
+data191: dc 0xBF
+data192: dc 0xC0
+data193: dc 0xC1
+data194: dc 0xC2
+data195: dc 0xC3
+data196: dc 0xC4
+data197: dc 0xC5
+data198: dc 0xC6
+data199: dc 0xC7
+data200: dc 0xC8
+data201: dc 0xC9
+data202: dc 0xCA
+data203: dc 0xCB
+data204: dc 0xCC
+data205: dc 0xCD
+data206: dc 0xCE
+data207: dc 0xCF
+data208: dc 0xD0
+data209: dc 0xD1
+data210: dc 0xD2
+data211: dc 0xD3
+data212: dc 0xD4
+data213: dc 0xD5
+data214: dc 0xD6
+data215: dc 0xD7
+data216: dc 0xD8
+data217: dc 0xD9
+data218: dc 0xDA
+data219: dc 0xDB
+data220: dc 0xDC
+data221: dc 0xDD
+data222: dc 0xDE
+data223: dc 0xDF
+data224: dc 0xE0
+data225: dc 0xE1
+data226: dc 0xE2
+data227: dc 0xE3
+data228: dc 0xE4
+data229: dc 0xE5
+data230: dc 0xE6
+data231: dc 0xE7
+data232: dc 0xE8
+data233: dc 0xE9
+data234: dc 0xEA
+data235: dc 0xEB
+data236: dc 0xEC
+data237: dc 0xED
+data238: dc 0xEE
+data239: dc 0xEF
+data240: dc 0xF0
+data241: dc 0xF1
+data242: dc 0xF2
+data243: dc 0xF3
+data244: dc 0xF4
+data245: dc 0xF5
+data246: dc 0xF6
+data247: dc 0xF7
+data248: dc 0xF8
+data249: dc 0xF9
+data250: dc 0xFA
+data251: dc 0xFB
+data252: dc 0xFC
+data253: dc 0xFD
+data254: dc 0xFE
+data255: dc 0xFF
+data256: dc 0x100
+
+* Vector 16x1
+data257: dc 0x01
+data258: dc 0x02
+data259: dc 0x03
+data260: dc 0x04
+data261: dc 0x05
+data262: dc 0x06
+data263: dc 0x07
+data264: dc 0x08
+data265: dc 0x09
+data266: dc 0x0A
+data267: dc 0x0B
+data268: dc 0x0C
+data269: dc 0x0D
+data270: dc 0x0E
+data271: dc 0x0F
+data272: dc 0x10
+
+* Output addresses
+addr1: ds
+addr2: ds
+addr3: ds
+addr4: ds
+addr5: ds
+addr6: ds
+addr7: ds
+addr8: ds
+addr9: ds
+addr10: ds
+addr11: ds
+addr12: ds
+addr13: ds
+addr14: ds
+addr15: ds
+addr16: ds
+
+* --- Rows 0 to 15: Multiply matrix row by vector --- 
+
+* 16x16 Row 0 computation (example)
+addi R7 R0 0   * Result storage for row 0
+addi R8 R0 0   * Temp storage
+addi R9 R0 1   * Mask for AND operation
+addi R10 R0 0  * Loop counter
+addi R11 R0 15 * Iteration count for shifts
+
+* --- Load row 0 of matrix and vector ---
+lw R1  R0 data1
+lw R2  R0 data2
+lw R3  R0 data3
+lw R4  R0 data4
+lw R5  R0 data5
+lw R6  R0 data6
+lw R7  R0 data7
+lw R8  R0 data8
+lw R9  R0 data9
+lw R10 R0 data10
+lw R11 R0 data11
+lw R12 R0 data12
+lw R13 R0 data13
+lw R14 R0 data14
+lw R15 R0 data15
+lw R16 R0 data16
+
+* Load vector
+lw R17 R0 vdata1
+lw R18 R0 vdata2
+lw R19 R0 vdata3
+lw R20 R0 vdata4
+lw R21 R0 vdata5
+lw R22 R0 vdata6
+lw R23 R0 vdata7
+lw R24 R0 vdata8
+lw R25 R0 vdata9
+lw R26 R0 vdata10
+lw R27 R0 vdata11
+lw R28 R0 vdata12
+lw R29 R0 vdata13
+lw R30 R0 vdata14
+lw R31 R0 vdata15
+lw R32 R0 vdata16
+
+* --- Multiplication 1: R1 * R17 ---
+addi R33 R0 8000
+and R34 R1 R33
+and R35 R17 R33
+xor R36 R34 R35
+beqz R34 1
+sub R1 R0 R1
+beqz R35 1
+sub R17 R0 R17
+*skip_neg1:
+
+*mul1_loop:
+and R37 R9 R17
+beqz R37 2
+add R7 R7 R1
+addi R8 R8 1
+*sll1:
+slli R1 R1
+srli R17 R17
+addi R10 R10 1
+slti R37 R10 16
+bnez R37 -9
+beqz R36 1
+sub R7 R0 R7
+*skip_sign1:
+
+* Reset counters
+addi R10 R0 0
+addi R8 R0 0
+
+* --- Multiplication 2: R2 * R18 ---
+addi R33 R0 8000
+and R34 R2 R33
+and R35 R18 R33
+xor R36 R34 R35
+beqz R34 1
+sub R2 R0 R2
+beqz R35 1
+sub R18 R0 R18
+*skip_neg2:
+
+*mul2_loop:
+and R37 R9 R18
+beqz R37 2
+add R8 R8 R2
+addi R10 R10 1
+*sll2:
+slli R2 R2
+srli R18 R18
+addi R11 R11 -1
+bnez R11 -8
+beqz R36 1
+sub R8 R0 R8
+*skip_sign2:
+
+* --- Sum result for first two multiplications ---
+add R39 R7 R0
+add R40 R8 R0
+add R7 R7 R8
+add R41 R7 R0
+
+* Continue similarly for Multiplication 3..16
+* Each will use next registers for matrix element and vector element
+* For brevity, loop structure can be duplicated from mul1_loop/mul2_loop
+* After last multiplication, perform ReLU:
+
+slti R42 R7 0
+beqz R42 1
+addi R7 R0 0
+*relu_skip:
+sw R7 R0 addr1
+ 
+halt

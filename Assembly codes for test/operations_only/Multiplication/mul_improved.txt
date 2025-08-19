@@ -1,0 +1,4 @@
+*Perform Multiplication on improved dlx.
+*Multiply R1 and R2 and put the result in R3.
+
+mul R3 R2 R1
