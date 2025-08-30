@@ -1,4 +1,4 @@
-# Tiny Machine Learning Extensions - Final Project 3011
+<img width="138" height="144" alt="image" src="https://github.com/user-attachments/assets/8e9e3d3c-e2b1-48c7-8d8b-f1c623e2c243" /><img width="870" height="659" alt="image" src="https://github.com/user-attachments/assets/664cc306-22a2-4a3b-9d0c-8ded33e9b97c" /># Tiny Machine Learning Extensions - Final Project 3011
 
 This repository contains the files and resources for the **Extended DLX processor project**, which implements hardware extensions to accelerate inference for neural networks. The repository is structured into three main folders:
 
@@ -51,6 +51,43 @@ Contains extra files required to fully utilize and compile the project:
 3. **Running on FPGA:** Load the `Extended_DLX.bit` file to the FPGA to test programs in real hardware.
 4. **Assembly Programming:** Use `Extended_DLX_instructions.xml` with your assembler to write and compile programs that utilize the new instructions.
 
+---
+
+## User Guide – Running on FPGA with RESA
+
+To run the extended DLX processor on FPGA using **RESA**, follow these steps:
+
+1. **Open RESA from the desktop.**  
+<img width="138" height="144" alt="image" src="https://github.com/user-attachments/assets/aec92d62-be7c-4d79-b32f-3cda210301d6" />
+
+2. **Set up the hardware monitor:**  
+   - Select **A Load/Store Machine + A simplified DLX**.
+<img width="494" height="231" alt="image" src="https://github.com/user-attachments/assets/f4f7bab4-d013-4d28-a466-6420f2c390a4" />
+  
+3. **Load required files:**  
+   - **Labels file:** Load `labels.lbl` (located in the `Additional` folder).
+<img width="864" height="664" alt="image" src="https://github.com/user-attachments/assets/f6a9d406-7ddd-4cb5-bdc9-6167a04a56e8" />
+  
+   - **Bitstream file:** Load the `.bit` file (also in the `Additional` folder), which contains the full design of the extended proccessor.
+<img width="883" height="675" alt="image" src="https://github.com/user-attachments/assets/70bbc6d5-2614-4484-8a56-e659920d3c7d" />
+ 
+4. **Compile the assembly code:**  
+   - Open RESA and choose the **Compiler**. 
+<img width="492" height="225" alt="image" src="https://github.com/user-attachments/assets/ad3201a7-806a-4df1-8f28-6596172c7825" />
+ 
+   - Paste your assembly program into the editor.  
+   - Click **Compile** to generate a `.cod` file.
+<img width="873" height="467" alt="image" src="https://github.com/user-attachments/assets/e78f6c30-e025-418f-8dce-0face66dbd36" />
+  
+5. **Upload and run the program:**  
+   - Load the generated `.cod` file (output of the compiler) into RESA.
+<img width="872" height="667" alt="image" src="https://github.com/user-attachments/assets/14774560-23c6-4c78-9e9e-eadc2382045f" />
+  
+   - Run the program using one of two modes:  
+     - **Step mode:** Execute instructions one by one.  
+     - **Continuous mode:** Run the program until the last instruction (`halt`). 
+<img width="892" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7dad58-1de3-474b-96db-4507a4a8be88" />
+ 
 ---
 
 ## Notes
