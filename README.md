@@ -1,5 +1,3 @@
-<img width="138" height="144" alt="image" src="https://github.com/user-attachments/assets/8e9e3d3c-e2b1-48c7-8d8b-f1c623e2c243" /><img width="870" height="659" alt="image" src="https://github.com/user-attachments/assets/664cc306-22a2-4a3b-9d0c-8ded33e9b97c" /># Tiny Machine Learning Extensions - Final Project 3011
-
 This repository contains the files and resources for the **Extended DLX processor project**, which implements hardware extensions to accelerate inference for neural networks. The repository is structured into three main folders:
 
 ---
@@ -69,8 +67,8 @@ To run the extended DLX processor on FPGA using **RESA**, follow these steps:
 <img width="864" height="664" alt="image" src="https://github.com/user-attachments/assets/f6a9d406-7ddd-4cb5-bdc9-6167a04a56e8" />
   
    - **Bitstream file:** Load the `.bit` file (also in the `Additional` folder), which contains the full design of the extended proccessor.
-<img width="883" height="675" alt="image" src="https://github.com/user-attachments/assets/70bbc6d5-2614-4484-8a56-e659920d3c7d" />
- 
+<img width="870" height="659" alt="image" src="https://github.com/user-attachments/assets/b15e698d-cd84-44ef-a45f-4644fef5fd8f" />
+
 4. **Compile the assembly code:**  
    - Open RESA and choose the **Compiler**. 
 <img width="492" height="225" alt="image" src="https://github.com/user-attachments/assets/ad3201a7-806a-4df1-8f28-6596172c7825" />
