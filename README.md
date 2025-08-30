@@ -81,15 +81,16 @@ To run the extended DLX processor on FPGA using **RESA**, follow these steps:
 <img width="873" height="467" alt="image" src="https://github.com/user-attachments/assets/e78f6c30-e025-418f-8dce-0face66dbd36" />
   
 5. **Upload and run the program:**  
-   - Load the generated `.cod` file (output of the compiler) into RESA.
-<img width="872" height="667" alt="image" src="https://github.com/user-attachments/assets/14774560-23c6-4c78-9e9e-eadc2382045f" />
-  
+   - Load the generated `.cod` file (output of the compiler) into RESA.  
+   <img width="872" height="667" alt="image" src="https://github.com/user-attachments/assets/14774560-23c6-4c78-9e9e-eadc2382045f" />  
+
    - Run the program using one of two modes:  
      - **Step mode:** Execute instructions one by one.  
-     - **Continuous mode:** Run the program until the last instruction (`halt`). 
-<img width="892" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7dad58-1de3-474b-96db-4507a4a8be88" />
- 
-   ✅ The results can be observed in the **Register values** and the **Memory dump** within RESA.
+     - **Continuous mode:** Run the program until the last instruction (`halt`).  
+   <img width="892" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7dad58-1de3-474b-96db-4507a4a8be88" />  
+
+   ✅ The results can be observed in the **register values** and the **memory view** within RESA.
+
 ---
 
 ## Notes
