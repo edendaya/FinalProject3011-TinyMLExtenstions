@@ -58,9 +58,12 @@ To run the extended DLX processor on FPGA using **RESA**, follow these steps:
 1. **Open RESA from the desktop.**  
 <img width="138" height="144" alt="image" src="https://github.com/user-attachments/assets/aec92d62-be7c-4d79-b32f-3cda210301d6" />
 
-2. **Set up the hardware monitor:**  
+2. **Open the Hardware Monitor and configure the DLX machine:** 
+   - Select **Hardware Monitor**. 
+<img width="494" height="231" alt="image" src="https://github.com/user-attachments/assets/e7231626-803a-4ae2-a435-2f18ee937577" />
+
    - Select **A Load/Store Machine + A simplified DLX**.
-<img width="494" height="231" alt="image" src="https://github.com/user-attachments/assets/f4f7bab4-d013-4d28-a466-6420f2c390a4" />
+<img width="877" height="678" alt="image" src="https://github.com/user-attachments/assets/9804a699-a743-45a6-b3f9-ea47479e6f39" />
   
 3. **Load required files:**  
    - **Labels file:** Load `labels.lbl` (located in the `Additional` folder).
@@ -86,6 +89,7 @@ To run the extended DLX processor on FPGA using **RESA**, follow these steps:
      - **Continuous mode:** Run the program until the last instruction (`halt`). 
 <img width="892" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7dad58-1de3-474b-96db-4507a4a8be88" />
  
+   ✅ The results can be observed in the **Register values** and the **Memory dump** within RESA.
 ---
 
 ## Notes
