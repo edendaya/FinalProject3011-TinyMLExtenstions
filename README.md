@@ -89,7 +89,7 @@ To run the extended DLX processor on FPGA using **RESA**, follow these steps:
      - **Continuous mode:** Run the program until the last instruction (`halt`).  
    <img width="892" height="452" alt="image" src="https://github.com/user-attachments/assets/6a7dad58-1de3-474b-96db-4507a4a8be88" />  
 
-   ✅ The results can be observed in the **register values** and the **memory view** within RESA.
+✅ **The results can be observed in the Register values and the Memory dump within RESA.**
 
 ---
 
